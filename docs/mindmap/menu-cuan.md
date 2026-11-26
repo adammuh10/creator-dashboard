@@ -33,11 +33,6 @@ markmap:
   - Platform: IG, TikTok, YouTube
   - Format: Reels, Carousel, Story, Video
   - Add-on: Collab, Mirroring, Owning, Link
-- Lewat manager / agensi
-  - Nama perantara
-  - Komisi % atau nominal
-  - Fee bersih
-  - Invoice ke brand atau ke agensi
 - Termin
   - DP
   - Pelunasan
@@ -151,7 +146,6 @@ markmap:
 - Harga custom
   - Harga rumus (otomatis)
   - Harga kamu (dikunci)
-  - Harga di rate card (setelah aman pajak)
   - Peringatan kalau terlalu murah
 - Paket custom
   - Nama + isi bebas
@@ -168,18 +162,16 @@ markmap:
 
 ## 7. Pajak
 
-- Default dari 1 pertanyaan awal
-- Pilihan potongan per invoice
-  - Tanpa potongan
-  - PPh 21 dipotong brand
-  - PPh 21, harga aman pajak
-  - PPh 23 2% (PT/CV)
+- Dipilih saat buat invoice
+  - Dipotong? Tidak / PPh 21 / PPh 23
+  - Gross-up? Ya / Tidak
+  - Diingat per brand
 - Tarif PPh 21
-  - 2,5% (default)
+  - 2,5%
   - 3% (tanpa NPWP)
   - Isi sendiri
-- Harga aman pajak
-  - Ditagih = bersih ÷ (1 − tarif − komisi)
+- Gross-up
+  - Ditagih = rate ÷ (1 − tarif)
   - Dibulatkan ke atas
   - Kamu terima ≥ rate-mu
 - Tampilan invoice (otomatis)

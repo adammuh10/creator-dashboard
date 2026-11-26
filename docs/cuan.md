@@ -27,17 +27,9 @@ Sheets, atau Excel, ditambah beberapa kolom yang biasanya belum ada.
 | Fee | Bruto, sebelum potongan |
 | Status bayar | Belum → Ditagih → DP → Lunas, ditambah Telat (otomatis kalau lewat jatuh tempo) |
 | Tanggal dibayar | Diisi saat ditandai Lunas |
-| **Lewat manager / agensi** | Nama perantara dan komisinya (% atau nominal), sehingga fee bersih terlihat |
 | Termin | DP sekian %, pelunasan setelah posting |
 | Bukti tayang | Link postingan + angka dari data impor |
 | Brief & kontrak | File atau link |
-
-**Deal lewat manager atau agensi.** Ada dua pola, dan creator memilih salah
-satu per deal:
-- **Brand bayar ke kamu, kamu bayar komisi ke manager.** Invoice ke brand.
-  Komisi hanya muncul di hitunganmu, tidak tercetak di invoice.
-- **Brand bayar ke agensi, agensi bayar ke kamu.** Invoice ke agensi
-  (Bill to = agensi), sebesar fee setelah komisi.
 
 ## 2. Profil penagih (diisi sekali, dipakai di semua invoice)
 
@@ -60,63 +52,57 @@ dicek.
 | Bagian | Isi |
 |---|---|
 | Kepala | Logo, nama, kontak, NPWP; nomor invoice, tanggal, jatuh tempo (NET 7/14/30), no PO kalau brand minta |
-| Bill to | Nama PT/brand, alamat, PIC, email (dari data brand) |
+| Bill to | Siapa pun yang memberi kerjaan: nama perusahaan, alamat, PIC, email (tersimpan, jadi tidak diketik ulang) |
 | Tabel | Deskripsi (dari SOW), qty, harga satuan, jumlah |
 | Hitungan | Subtotal → diskon → PPN (kalau PKP) → total tagihan → dikurangi DP yang sudah dibayar → **sisa tagihan** |
-| Potongan pajak | Tanpa potongan / PPh 21 / PPh 21 harga aman pajak / PPh 23, dengan tampilan ringkas atau rinci (lihat di bawah). Aplikasi selalu menampilkan **perkiraan uang bersih diterima** |
+| Potongan pajak | Dipilih di invoice ini: dipotong atau tidak, dan gross-up atau tidak (lihat di bawah). Aplikasi selalu menampilkan **perkiraan uang bersih diterima** |
 | Terbilang | "Satu juta dua ratus ribu rupiah" (sering diminta tim finance) |
 | Pembayaran | Bank, nomor rekening, atas nama |
 | Penutup | Catatan/syarat, tanda tangan, nama terang, kota & tanggal |
 | Meterai | Pengingat kalau nilai lebih dari Rp5.000.000 |
 
-### Potongan pajak
+### Potongan pajak (dipilih setiap membuat invoice)
 
-**Default untuk pengguna baru.** Saat pertama membuka Cuan, aplikasi
-menanyakan satu hal: *"Biasanya brand memotong pajak dari fee-mu?"*
+Tidak ada pengaturan pajak di awal, karena tiap brand bisa beda. Setiap kali
+membuat invoice, ada dua pilihan:
 
-| Jawaban | Default yang dipasang |
-|---|---|
-| Ya | PPh 21 dipotong brand, 2,5%. Langsung muncul tawaran: "Mau tetap terima rate utuh? Nyalakan harga aman pajak" |
-| Tidak | Tanpa potongan |
-| Belum tahu | Tanpa potongan, plus penjelasan singkat dan perkiraan potongan kalau nanti brand memotong |
+1. **Brand memotong pajak?** Tidak · PPh 21 2,5% · PPh 21 3% (tanpa NPWP)
+   · PPh 23 2% (kalau menagih atas nama PT/CV) · isi sendiri.
+2. **Gross-up?** Muncul kalau ada potongan. Kalau dinyalakan, tagihan
+   dinaikkan supaya setelah dipotong kamu tetap terima rate-mu utuh.
 
-Default bisa diubah di pengaturan dan diganti per invoice.
+Invoice berikutnya ke brand yang sama sudah terisi dengan pilihan terakhir
+untuk brand itu, dan tetap bisa diganti. Brand baru mulai dari "Tidak".
 
-| Pilihan | Dipakai kalau | Hasilnya |
-|---|---|---|
-| Tanpa potongan | Brand tidak memotong pajak (brand perorangan, brand luar negeri) | Ditagih = fee |
-| PPh 21 dipotong brand | Kamu perorangan, brand berbadan usaha (paling umum) | Ditagih = fee; kamu terima fee − PPh |
-| **PPh 21, harga aman pajak** | Kamu mau tetap terima rate-mu utuh | Tagihan dinaikkan sedikit, supaya setelah dipotong kamu terima persis rate-mu |
-| PPh 23 (2%) | Kamu menagih atas nama PT/CV | Ditagih = fee; kamu terima fee − 2% |
+Tarif PPh 21 2,5% berasal dari 50% × tarif lapisan pertama 5%; tanpa NPWP
+20% lebih tinggi (3%). Tarif bisa lebih tinggi kalau total penghasilan dari
+brand yang sama dalam setahun besar. Semua angka pajak di aplikasi adalah
+perkiraan; cek ke konsultan pajak.
 
-**Tarif PPh 21:** 2,5% (default, dari 50% × tarif lapisan pertama 5%), 3%
-(tanpa NPWP, 20% lebih tinggi), atau isi sendiri. Tarif bisa lebih tinggi
-kalau total penghasilan dari brand yang sama dalam setahun besar. Semua
-angka pajak di aplikasi adalah perkiraan; cek ke konsultan pajak.
-
-**Rumus harga aman pajak:**
+**Rumus gross-up:**
 
 ```
-ditagih = rate bersih yang kamu mau ÷ (1 − tarif PPh − komisi perantara)
-          → dibulatkan ke ATAS (Rp1.000 / Rp10.000 / Rp50.000)
+ditagih = rate yang mau kamu terima ÷ (1 − tarif)
+          → dibulatkan ke ATAS (Rp1.000)
 ```
 
 Pembulatan selalu ke atas, supaya yang kamu terima tidak pernah kurang dari
 rate-mu.
 
-| Rate bersih yang kamu mau | Tarif | Komisi perantara | Ditagih (bulat ke atas Rp1.000) | Dipotong PPh | Komisi | Kamu terima |
-|---|---|---|---|---|---|---|
-| Rp1.000.000 | 2,5% | — | Rp1.026.000 | Rp25.650 | — | Rp1.000.350 |
-| Rp1.000.000 | 3% | — | Rp1.031.000 | Rp30.930 | — | Rp1.000.070 |
-| Rp1.500.000 | 2,5% | 10% (manager) | Rp1.715.000 | Rp42.875 | Rp171.500 | Rp1.500.625 |
+| Mau terima | Potongan | Ditagih | Dipotong | Kamu terima |
+|---|---|---|---|---|
+| Rp1.000.000 | PPh 21 2,5% | Rp1.026.000 | Rp25.650 | Rp1.000.350 |
+| Rp1.000.000 | PPh 21 3% | Rp1.031.000 | Rp30.930 | Rp1.000.070 |
+| Rp1.500.000 | PPh 21 2,5% | Rp1.539.000 | Rp38.475 | Rp1.500.525 |
+| Rp1.000.000 | PPh 23 2% | Rp1.021.000 | Rp20.420 | Rp1.000.580 |
+
+Tanpa gross-up: ditagih Rp1.000.000, dipotong 2,5%, kamu terima Rp975.000.
 
 **Tampilan di invoice** dipilih otomatis, dan bisa diganti:
-- **Rinci** kalau ada potongan pajak: Nilai jasa → PPh 21 dipotong (2,5%) →
-  Jumlah yang ditransfer. Tim finance brand butuh rincian ini untuk membuat
-  bukti potong.
+- **Rinci** kalau ada potongan pajak: Nilai jasa → PPh dipotong → Jumlah
+  yang ditransfer. Tim finance brand butuh rincian ini untuk membuat bukti
+  potong.
 - **Ringkas** kalau tanpa potongan: hanya total, tanpa baris pajak.
-
-Komisi manager tidak pernah tercetak di invoice ke brand.
 
 Kalau kamu PKP, PPN dihitung dari nilai jasa dan ditambahkan di atasnya;
 PPh dihitung dari nilai jasa sebelum PPN.
@@ -163,13 +149,15 @@ kelihatan kalau rate card terlalu tinggi atau terlalu rendah.
 
 ### Harga custom dan paket
 
-Rumus hanya titik awal. Setiap item di rate card punya tiga angka:
+Rumus hanya titik awal. Setiap item di rate card punya dua angka:
 
 | Angka | Isi |
 |---|---|
 | Harga rumus | Dihitung otomatis dari data |
-| **Harga kamu** | Diisi sendiri, lalu dikunci (tidak berubah walaupun datanya berubah) |
-| Harga di rate card | Harga yang dilihat brand. Kalau opsi **"naikkan supaya aman pajak"** menyala, ini adalah harga kamu setelah gross-up |
+| **Harga kamu** | Diisi sendiri, lalu dikunci (tidak berubah walaupun datanya berubah). Ini yang tampil di rate card |
+
+Rate card tidak mengurus pajak. Gross-up dipilih per invoice, karena ada
+brand yang memotong pajak dan ada yang tidak.
 
 - **Paket custom:** beri nama, pilih isinya (misalnya 1 Reels + mirroring
   TikTok + 3 IG Story), lalu pilih harga otomatis (jumlah isi − diskon) atau
@@ -197,7 +185,6 @@ Bisa dibagikan sebagai PDF atau link, dan nyambung ke media kit.
 | Ide | Kenapa penting |
 |---|---|
 | **Impor dari Notion, Sheets, Excel** (CSV) | Catatan deal yang sudah ada langsung pindah, tanpa ketik ulang. Kolom dicocokkan otomatis; kolom campuran platform/format dipecah jadi tiga |
-| **Manager / agensi + komisi** | Fee bruto vs yang benar-benar kamu terima kelihatan jelas |
 | **Termin / DP** | Banyak brand bayar DP dulu; sisa tagihan dihitung otomatis |
 | **Lama dibayar per brand** | Kelihatan brand yang selalu telat bayar, berguna untuk menentukan syarat DP berikutnya |
 | **Brand langganan** | Brand yang deal lebih dari sekali bisa ditawari paket bulanan |
@@ -231,8 +218,9 @@ Detail syarat ada di [akun-privasi.md](akun-privasi.md).
 
 ## 8. Keputusan terbuka
 
-Sudah diputuskan: default pajak lewat satu pertanyaan awal, dan tampilan
-invoice otomatis (rinci kalau ada potongan). Lihat bagian 3.
+Sudah diputuskan: pajak dan gross-up dipilih per invoice (pilihan terakhir
+per brand diingat), dan tampilan invoice otomatis (rinci kalau ada
+potongan). Lihat bagian 3.
 
 1. Default jatuh tempo: NET 7 atau NET 14?
 2. Nilai awal add-on dan faktor format: cek ke 10-20 creator lewat survei

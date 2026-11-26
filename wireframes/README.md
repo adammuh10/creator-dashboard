@@ -18,7 +18,7 @@ Keputusan yang dipakai:
 | ![C](grup-c.png) | 7 Pratinjau impor · 8 Cuan · 9 Lainnya / Akun |
 | ![D](grup-d.png) | 10 Daftar · 11 Profil & keamanan · 12 Langganan |
 | ![E](grup-e.png) | 13 Privasi & data · 14 Hapus akun · 15 Akun terhapus |
-| ![F](grup-f.png) | 16 Rate card · 17 Paket custom · 18 Invoice, potongan pajak |
+| ![F](grup-f.png) | 16 Rate card · 17 Paket custom · 18 Invoice, pajak |
 
 Syarat privasi dan toko aplikasi yang dipenuhi tiap layar ada di
 [docs/akun-privasi.md](../docs/akun-privasi.md).
