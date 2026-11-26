@@ -5,3 +5,4 @@ dari file ekspor tiap platform (tanpa koneksi API), plus kalender konten dan
 insight AI.
 
 - [Information Architecture](docs/IA.md)
+- [Riset UX (simulasi)](docs/ux-research.md)
