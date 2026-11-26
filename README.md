@@ -9,3 +9,4 @@ insight AI.
 - [Menu Tugas + mind map](docs/menu-tugas.md)
 - [Wireframe HP](wireframes/README.md)
 - [Akun & privasi: daftar syarat](docs/akun-privasi.md)
+- [Menu Cuan: kerja sama, invoice, rate card](docs/cuan.md)
