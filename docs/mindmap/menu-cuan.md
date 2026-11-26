@@ -37,7 +37,7 @@ markmap:
   - DP
   - Pelunasan
 - Status konten
-  - Nego → Deal → Draft → Revisi → Approved → Posted
+  - Deal → Draft → Revisi → Approved → Posted
 - Status bayar
   - Belum → Ditagih → DP → Lunas
   - Telat
@@ -96,8 +96,7 @@ markmap:
 ## 4. Kirim dan lacak
 
 - Unduh PDF
-- Link invoice
-- Kirim lewat email / WA
+- Unduh PDF, kirim sendiri (email / WA)
 - Status: Draft, Terkirim, Lunas, Telat, Batal
 - Pengingat jatuh tempo
 - Template pesan follow-up
@@ -116,6 +115,9 @@ markmap:
 
 ## 6. Rate card
 
+- Cara buat
+  - Isi manual
+  - Hitung otomatis
 - Data dasar
   - Median views 30-90 hari (dari impor)
   - Engagement rate
@@ -158,7 +160,7 @@ markmap:
   - Paket: single, bundle, bulanan
   - Syarat: DP, revisi, hak pakai
 - Bandingkan dengan fee asli
-- Bagikan: PDF / link
+- Unduh: PDF / gambar
 
 ## 7. Pajak
 
@@ -193,7 +195,6 @@ markmap:
 - Lama rata-rata dibayar per brand
 - Uang masuk bulan depan
 - Fee rata-rata vs rate card
-- Rasio nego berhasil
 
 ## 9. Impor
 
@@ -212,7 +213,7 @@ markmap:
 
 - NIK, NPWP, rekening dienkripsi
 - Tampil tersamar (•••• 1234)
-- Tidak ikut di link publik kecuali dipilih
+- Lengkap hanya di PDF yang diunduh
 - Ikut di unduh data dan hapus akun
 
 ## 12. Gratis vs Pro
@@ -222,7 +223,7 @@ markmap:
   - 3 invoice / bulan
 - Pro
   - Invoice tanpa batas
-  - Kwitansi, pengingat, link invoice
+  - Kwitansi, pengingat
   - Rate card otomatis
   - Rekap pajak dan ekspor
   - Impor CSV

@@ -1,5 +1,8 @@
 # Menu Tugas: persiapan konten
 
+> Platform: website. Bagian "di HP" berarti tampilan website yang sama di
+> browser HP, bukan aplikasi toko.
+
 Versi 0.1 · draf untuk didiskusikan
 
 Menu ini menjawab satu pertanyaan: **"hari ini aku harus ngapain supaya

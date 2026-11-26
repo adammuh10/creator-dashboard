@@ -10,7 +10,7 @@ Versi 0.2 · draf untuk didiskusikan
 
 ## 1. Ringkasan produk
 
-Web app (desktop dan HP) untuk kreator yang ingin melihat performa konten
+Website (dibuka di browser, desktop dulu; di HP lewat browser yang sama, bukan aplikasi toko) untuk kreator yang ingin melihat performa konten
 TikTok, Instagram, dan YouTube di satu tempat, tahu apa yang berhasil dan apa
 yang tidak, lalu merencanakan konten berikutnya.
 
@@ -103,7 +103,7 @@ Sidebar kiri (hijau tua), urutan:
 Bar atas: pencarian (postingan, ide, konten), status data terakhir
 ("Data TikTok terakhir 18 Nov"), tombol **Impor**, notifikasi.
 
-### HP
+### Di browser HP (responsif)
 
 Bar bawah 5 item: **Ringkasan · Platform · (+) Impor · Konten · Lainnya**.
 "Lainnya" berisi Ide & Tren, Laporan, Pengaturan. Pemilih brand ada di

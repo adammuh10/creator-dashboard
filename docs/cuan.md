@@ -13,6 +13,10 @@ pajak, laporan, impor, template, keamanan, paket). Sumber teks:
 
 ## 1. Kerja sama (brand deals)
 
+Aplikasi ini khusus kreator. Brand tidak pernah membuka website ini: yang
+dicatat hanya deal yang sudah disepakati, dan invoice serta rate card
+diunduh lalu dikirim sendiri oleh kreator.
+
 Kolomnya mengikuti cara creator biasanya mencatat deal di Notion, Google
 Sheets, atau Excel, ditambah beberapa kolom yang biasanya belum ada.
 
@@ -22,7 +26,7 @@ Sheets, atau Excel, ditambah beberapa kolom yang biasanya belum ada.
 | Akun | Untuk creator yang punya lebih dari satu akun. Setiap akun punya rate card sendiri |
 | Platform + Format + Add-on | Tiga kolom terpisah. Di tabel manual, ketiganya sering dicampur dalam satu kolom (mis. "Reels, TikTok, mirroring"), jadi tidak bisa dihitung. Platform = IG/TikTok/YouTube, Format = Reels/Carousel/Story/Video, Add-on = Collab/Mirroring/Owning/Link |
 | SOW | Daftar deliverable. Tiap baris otomatis jadi tugas di menu Tugas dan baris di invoice |
-| Status konten | Nego → Deal → Draft → Revisi → Approved → Posted |
+| Status konten | Deal → Draft → Revisi → Approved → Posted |
 | Tanggal posting | Tersambung ke menu Tugas |
 | Fee | Bruto, sebelum potongan |
 | Status bayar | Belum → Ditagih → DP → Lunas, ditambah Telat (otomatis kalau lewat jatuh tempo) |
@@ -109,7 +113,7 @@ PPh dihitung dari nilai jasa sebelum PPN.
 
 ### Setelah dibuat
 
-- Unduh PDF, bagikan link invoice, atau kirim lewat email/WA dengan template pesan.
+- Unduh PDF, lalu kirim sendiri lewat email/WA. Ada template pesan yang tinggal disalin.
 - Status: Draft → Terkirim → Lunas, ditambah Telat dan Batal.
 - Pengingat H-1 dan saat jatuh tempo, plus template pesan follow-up.
 - **Kwitansi otomatis** begitu ditandai Lunas.
@@ -122,9 +126,18 @@ Semua invoice dan kwitansi tersimpan. Bisa dicari dan difilter (brand,
 akun, tahun, status), diunduh ulang, diduplikat untuk brand yang sama, dan
 diekspor ke CSV/Excel untuk akuntan.
 
-## 4. Rate card otomatis
+## 4. Rate card
 
-### Rumus
+### Dua cara membuat
+
+| Cara | Isi |
+|---|---|
+| **Isi manual** | Kreator mengetik sendiri harga tiap format, add-on, paket, dan syarat. Tidak perlu data impor |
+| **Hitung otomatis** | Aplikasi menghitung dari data (rumus di bawah). Setiap harga tetap bisa ditimpa |
+
+Cara bisa diganti kapan saja. Wireframe: [alur 5](../wireframes/README.md).
+
+### Rumus (cara otomatis)
 
 ```
 rate = median views ÷ 1.000 × tarif per 1.000 views
@@ -191,7 +204,6 @@ Bisa dibagikan sebagai PDF atau link, dan nyambung ke media kit.
 | **Uang masuk bulan depan** | Total invoice yang belum dibayar plus jadwal posting yang sudah deal |
 | **Rekap pajak tahunan** | Total bruto, perkiraan PPh 21, dan bukti potong per brand, siap untuk SPT |
 | **Template pesan** | Balas DM dengan rate card, kirim invoice, follow-up bayar, kirim bukti tayang |
-| **Pipeline nego** | Catat tawaran yang masuk dan yang ditolak; lihat rasio deal dan selisih harga tawar vs rate card |
 | **Mata uang asing** | Untuk brand luar: USD, SWIFT code, alamat bank |
 
 ## 6. Keamanan data sensitif
@@ -200,8 +212,7 @@ NIK, NPWP, nomor rekening, dan tanda tangan termasuk data pribadi yang
 sensitif.
 - Dienkripsi di database.
 - Tampil tersamar di layar (`•••• 1234`), dibuka hanya saat perlu.
-- Tidak ikut di link invoice publik kecuali dipilih (rekening biasanya perlu,
-  NIK tidak).
+- Tercetak lengkap hanya di PDF invoice yang diunduh kreator sendiri.
 - Ikut terunduh di "Unduh semua data" dan ikut terhapus saat hapus akun.
 
 Detail syarat ada di [akun-privasi.md](akun-privasi.md).
@@ -211,7 +222,7 @@ Detail syarat ada di [akun-privasi.md](akun-privasi.md).
 | | Gratis | Pro |
 |---|---|---|
 | Kerja sama | Tanpa batas | Tanpa batas |
-| Invoice | 3 per bulan | Tanpa batas, plus kwitansi, link, pengingat |
+| Invoice | 3 per bulan | Tanpa batas, plus kwitansi dan pengingat |
 | Rate card otomatis | — | Ya |
 | Rekap pajak & ekspor | — | Ya |
 | Impor CSV (Notion, Sheets, Excel) | Ya (sekali, supaya mudah pindah) | Ya |
