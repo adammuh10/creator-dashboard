@@ -23,5 +23,21 @@ Keputusan yang dipakai:
 Syarat privasi dan toko aplikasi yang dipenuhi tiap layar ada di
 [docs/akun-privasi.md](../docs/akun-privasi.md).
 
-Belum ada: versi desktop, onboarding, Ide, Postingan, Laporan, Masuk /
-lupa kata sandi, notifikasi, dan tampilan kosong.
+## Alur
+
+Sumber: [flow.html](flow.html). Garis oranye = yang ditekan; keterangan di
+bawah tiap layar = aksi berikutnya.
+
+| Gambar | Alur |
+|---|---|
+| ![1](alur-1.png) | 1 · Daftar → onboarding → Ringkasan (7 layar) |
+| ![2](alur-2.png) | 2 · Impor data mingguan (5 layar) |
+| ![3](alur-3.png) | 3 · Konten yang berhasil → konten baru → terbit (6 layar) |
+| ![4](alur-4.png) | 4 · Kerja sama → invoice → kirim → lunas → kwitansi (9 layar) |
+| ![5](alur-5.png) | 5 · Rate card → link ke brand → tawaran masuk (4 layar) |
+| ![6](alur-6.png) | 6 · Masuk dan lupa kata sandi (4 layar) |
+
+Hapus akun: layar 13 → 14 → 15 di atas.
+
+Belum ada: versi desktop, Ide, Postingan, Laporan, notifikasi, dan
+tampilan kosong.
