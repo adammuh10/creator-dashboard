@@ -168,3 +168,19 @@ u{text-underline-offset:2px}
 .opt{border:1.5px solid var(--line);border-radius:12px;padding:14px}
 .opt.sel{border-color:var(--acc);background:#f3f8f5}
 .toast{position:absolute;right:18px;bottom:16px;background:var(--ink);color:#fff;border-radius:10px;padding:9px 14px;font-size:12.5px}
+/* ---- halaman tambahan ---- */
+.hm{display:grid;grid-template-columns:28px repeat(7,1fr);gap:3px;font-size:9.5px;color:var(--mute);align-items:center}
+.hm i{display:block;height:14px;border-radius:3px;background:var(--acc)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);font-size:10.5px}
+.cal>div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);height:62px;padding:3px 4px;overflow:hidden}
+.cal>.dh{height:auto;color:var(--mute);font-weight:600;text-align:center;padding:4px}
+.cal .n{color:var(--mute);font-size:10px}
+.ev{display:block;border-radius:4px;padding:1px 4px;margin-top:2px;font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#ececec}
+.ev.ig{background:#f7dbe6}.ev.tt{background:#dcdcdc}.ev.yt{background:#fde0d8}.ev.deal{border-left:3px solid var(--acc)}
+.cal .best{background:#f1f7f3}
+.lg{display:inline-flex;align-items:center;gap:4px;margin-right:10px;font-size:11px;color:#555}
+.lg i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.aibox{border-radius:12px;padding:10px 12px;font-size:12px;margin-bottom:8px}
+.aibox.ok{background:#eef5f0}.aibox.no{background:#fbeeea}
+.aibox b{display:block;margin-bottom:3px}
+.aibox p{margin:3px 0}
