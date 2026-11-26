@@ -24,6 +24,7 @@ di layar mana tiap syarat dipenuhi. Nomor layar merujuk ke
 | Transfer data ke luar negeri | Server (mis. Supabase/Vercel) dan penyedia AI kemungkinan di luar Indonesia. Disebutkan di Kebijakan Privasi; pilih region terdekat (Singapura) | Kebijakan Privasi |
 | Keamanan data | Kata sandi di-hash, koneksi HTTPS, akses database per pengguna (row level security), screenshot dihapus setelah angkanya terbaca | Teknis |
 | Pemberitahuan kebocoran | Kalau terjadi kebocoran, pengguna dan otoritas diberi tahu paling lambat 3 × 24 jam. Siapkan prosedur dan template email sebelum rilis | Proses internal |
+| Data keuangan sensitif (NIK, NPWP, rekening, tanda tangan untuk invoice) | Dienkripsi di database, tampil tersamar, hanya dipakai untuk invoice, tidak ikut di link publik kecuali dipilih, ikut terunduh dan terhapus bersama akun. Lihat [cuan.md](cuan.md) | Cuan → Profil penagih |
 | Kontak untuk urusan data | "Hubungi kami soal data" (email khusus, mis. privasi@domain) | 13 |
 
 ## 2. Pendaftaran PSE (Komdigi)
@@ -73,6 +74,7 @@ sebagai Penyelenggara Sistem Elektronik lingkup privat. Daftar lewat OSS
 | File video | Tidak pernah disimpan (hanya link) | — |
 | Catatan pembayaran langganan (invoice) | Sesuai kewajiban pajak | Disimpan terpisah, tanpa data konten; dijelaskan di Kebijakan Privasi |
 | Log keamanan (login, perangkat) | 90 hari | Dihapus bersama akun |
+| Invoice & kwitansi yang kamu buat untuk brand | Selama akun aktif (kamu bisa mengunduh arsipnya) | Dihapus bersama akun; unduh arsip dulu karena mungkin perlu untuk pajakmu |
 
 ## 7. Email dan analitik
 
