@@ -87,7 +87,7 @@ markmap:
 - Subtotal
 - Diskon
 - PPN (kalau PKP)
-- Perkiraan PPh 21 dipotong
+- Potongan pajak (lihat Pajak)
 - DP yang sudah dibayar
 - Total tagihan
 - Total bersih diterima
@@ -147,6 +147,17 @@ markmap:
 - Hasil
   - Harga buka (untuk nego)
   - Harga minimum
+- Harga custom
+  - Harga rumus (otomatis)
+  - Harga kamu (dikunci)
+  - Harga di rate card (setelah aman pajak)
+  - Peringatan kalau terlalu murah
+- Paket custom
+  - Nama + isi bebas
+  - Harga otomatis − diskon
+  - Atau harga tetap
+  - Tampil "hemat Rp…"
+- Riwayat versi rate card
 - Template
   - Per akun
   - Paket: single, bundle, bulanan
@@ -156,7 +167,23 @@ markmap:
 
 ## 7. Pajak
 
-- Perkiraan PPh 21 per deal
+- Pilihan potongan per invoice
+  - Tanpa potongan
+  - PPh 21 dipotong brand
+  - PPh 21, harga aman pajak
+  - PPh 23 2% (PT/CV)
+- Tarif PPh 21
+  - 2,5% (default)
+  - 3% (tanpa NPWP)
+  - Isi sendiri
+- Harga aman pajak
+  - Ditagih = bersih ÷ (1 − tarif − komisi)
+  - Dibulatkan ke atas
+  - Kamu terima ≥ rate-mu
+- Tampilan invoice
+  - Ringkas: tanpa baris pajak
+  - Rinci: nilai jasa, PPh, ditransfer
+- Perkiraan uang bersih per deal
 - Simpan bukti potong
 - Rekap tahunan untuk SPT
 - PPN kalau sudah PKP

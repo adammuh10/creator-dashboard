@@ -1,6 +1,6 @@
 # Wireframe HP (v0.2)
 
-Low-fidelity, 15 layar. Sumber: [index.html](index.html), buka di browser.
+Low-fidelity, 18 layar. Sumber: [index.html](index.html), buka di browser.
 
 Prinsip v0.2: satu tujuan per layar, label pendek, detail dipindah ke
 halaman berikutnya.
@@ -18,6 +18,7 @@ Keputusan yang dipakai:
 | ![C](grup-c.png) | 7 Pratinjau impor · 8 Cuan · 9 Lainnya / Akun |
 | ![D](grup-d.png) | 10 Daftar · 11 Profil & keamanan · 12 Langganan |
 | ![E](grup-e.png) | 13 Privasi & data · 14 Hapus akun · 15 Akun terhapus |
+| ![F](grup-f.png) | 16 Rate card · 17 Paket custom · 18 Invoice, potongan pajak |
 
 Syarat privasi dan toko aplikasi yang dipenuhi tiap layar ada di
 [docs/akun-privasi.md](../docs/akun-privasi.md).

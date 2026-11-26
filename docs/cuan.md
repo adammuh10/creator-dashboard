@@ -55,16 +55,51 @@ dicek.
 | Bill to | Nama PT/brand, alamat, PIC, email (dari data brand) |
 | Tabel | Deskripsi (dari SOW), qty, harga satuan, jumlah |
 | Hitungan | Subtotal → diskon → PPN (kalau PKP) → total tagihan → dikurangi DP yang sudah dibayar → **sisa tagihan** |
-| Info potongan | Perkiraan PPh 21 yang dipotong brand dan **perkiraan uang bersih diterima**. Ditampilkan di aplikasi, tidak wajib dicetak di invoice |
+| Potongan pajak | Tanpa potongan / PPh 21 / PPh 21 harga aman pajak / PPh 23, dengan tampilan ringkas atau rinci (lihat di bawah). Aplikasi selalu menampilkan **perkiraan uang bersih diterima** |
 | Terbilang | "Satu juta dua ratus ribu rupiah" (sering diminta tim finance) |
 | Pembayaran | Bank, nomor rekening, atas nama |
 | Penutup | Catatan/syarat, tanda tangan, nama terang, kota & tanggal |
 | Meterai | Pengingat kalau nilai lebih dari Rp5.000.000 |
 
-**Perkiraan PPh 21:** untuk kreator perorangan, brand umumnya memotong
-50% × penghasilan bruto × tarif Pasal 17 (lapisan pertama 5%), jadi sekitar
-2,5% dari fee. Rumus dan tarifnya bisa diubah di pengaturan, karena aturan
-pajak bisa berubah. Ini perkiraan, bukan konsultasi pajak.
+### Potongan pajak
+
+Default-nya diatur sekali di pengaturan, dan bisa diganti per invoice.
+
+| Pilihan | Dipakai kalau | Hasilnya |
+|---|---|---|
+| Tanpa potongan | Brand tidak memotong pajak (brand perorangan, brand luar negeri) | Ditagih = fee |
+| PPh 21 dipotong brand | Kamu perorangan, brand berbadan usaha (paling umum) | Ditagih = fee; kamu terima fee − PPh |
+| **PPh 21, harga aman pajak** | Kamu mau tetap terima rate-mu utuh | Tagihan dinaikkan sedikit, supaya setelah dipotong kamu terima persis rate-mu |
+| PPh 23 (2%) | Kamu menagih atas nama PT/CV | Ditagih = fee; kamu terima fee − 2% |
+
+**Tarif PPh 21:** 2,5% (default, dari 50% × tarif lapisan pertama 5%), 3%
+(tanpa NPWP, 20% lebih tinggi), atau isi sendiri. Tarif bisa lebih tinggi
+kalau total penghasilan dari brand yang sama dalam setahun besar. Semua
+angka pajak di aplikasi adalah perkiraan; cek ke konsultan pajak.
+
+**Rumus harga aman pajak:**
+
+```
+ditagih = rate bersih yang kamu mau ÷ (1 − tarif PPh − komisi perantara)
+          → dibulatkan ke ATAS (Rp1.000 / Rp10.000 / Rp50.000)
+```
+
+Pembulatan selalu ke atas, supaya yang kamu terima tidak pernah kurang dari
+rate-mu.
+
+| Rate bersih yang kamu mau | Tarif | Komisi perantara | Ditagih (bulat ke atas Rp1.000) | Dipotong PPh | Komisi | Kamu terima |
+|---|---|---|---|---|---|---|
+| Rp1.000.000 | 2,5% | — | Rp1.026.000 | Rp25.650 | — | Rp1.000.350 |
+| Rp1.000.000 | 3% | — | Rp1.031.000 | Rp30.930 | — | Rp1.000.070 |
+| Rp1.500.000 | 2,5% | 10% (Jenni) | Rp1.715.000 | Rp42.875 | Rp171.500 | Rp1.500.625 |
+
+**Tampilan di invoice** (pilih salah satu):
+- **Ringkas:** hanya harga yang sudah dinaikkan, tanpa baris pajak.
+- **Rinci:** Nilai jasa → PPh 21 dipotong (2,5%) → Jumlah yang ditransfer.
+  Tim finance brand biasanya lebih suka yang ini.
+
+Kalau kamu PKP, PPN dihitung dari nilai jasa dan ditambahkan di atasnya;
+PPh dihitung dari nilai jasa sebelum PPN.
 
 ### Setelah dibuat
 
@@ -105,6 +140,27 @@ Hasilnya dua angka: **harga buka** (untuk nego) dan **harga minimum** (batas
 bawah). Di sebelahnya ada **fee rata-rata asli** dari deal-deal sebelumnya,
 misalnya "Reels @tipscareer: rata-rata Rp1.150.000 dari 6 deal", supaya
 kelihatan kalau rate card terlalu tinggi atau terlalu rendah.
+
+### Harga custom dan paket
+
+Rumus hanya titik awal. Setiap item di rate card punya tiga angka:
+
+| Angka | Isi |
+|---|---|
+| Harga rumus | Dihitung otomatis dari data |
+| **Harga kamu** | Diisi sendiri, lalu dikunci (tidak berubah walaupun datanya berubah) |
+| Harga di rate card | Harga yang dilihat brand. Kalau opsi **"naikkan supaya aman pajak"** menyala, ini adalah harga kamu setelah gross-up |
+
+- **Paket custom:** beri nama, pilih isinya (misalnya 1 Reels + mirroring
+  TikTok + 3 IG Story), lalu pilih harga otomatis (jumlah isi − diskon) atau
+  harga tetap yang kamu tentukan. Rate card menampilkan "hemat Rp…" dibanding
+  beli satuan.
+- **Peringatan** kalau harga kamu lebih dari 30% di bawah harga rumus atau
+  di bawah fee rata-rata deal sebelumnya.
+- **Riwayat versi:** rate card lama tetap tersimpan (misalnya Jan 2026 dan
+  Jul 2026), supaya kelihatan harga mana yang pernah dikirim ke brand.
+- Saat membuat invoice dari deal, harga item diambil dari rate card versi
+  yang berlaku, dan bisa diubah.
 
 ### Template rate card
 
@@ -155,7 +211,7 @@ Detail syarat ada di [akun-privasi.md](akun-privasi.md).
 
 ## 8. Keputusan terbuka
 
-1. Perkiraan PPh 21 dicetak di invoice, atau cukup ditampilkan di aplikasi? (Usulan: di aplikasi saja.)
+1. Default potongan pajak untuk akunmu: PPh 21 biasa atau harga aman pajak? Tampilan invoice default: ringkas atau rinci?
 2. Default jatuh tempo: NET 7 atau NET 14?
 3. Nilai awal add-on dan faktor format: pakai angka di atas, atau kamu punya patokan sendiri?
 4. Perlu contoh file ekspor CSV dari Notion "Brand Deals 2026" supaya impornya pas.
