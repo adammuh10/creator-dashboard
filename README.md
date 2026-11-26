@@ -1,0 +1,7 @@
+# Creator Dashboard
+
+Web app untuk kreator: performa TikTok, Instagram, dan YouTube di satu tempat,
+dari file ekspor tiap platform (tanpa koneksi API), plus kalender konten dan
+insight AI.
+
+- [Information Architecture](docs/IA.md)
