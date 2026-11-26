@@ -1,6 +1,12 @@
 # Information Architecture: Creator Dashboard
 
-Versi 0.1 · draf untuk didiskusikan
+Versi 0.2 · draf untuk didiskusikan
+
+> Pembaruan v0.2: susunan menu mengikuti [riset UX](ux-research.md) dan
+> [menu Tugas](menu-tugas.md): Ringkasan · Tugas · Ide · Postingan · Cuan ·
+> Laporan, dengan bar bawah HP Ringkasan · Tugas · (+) · Cuan · Lainnya.
+> Bagian 2-4 di bawah masih memakai susunan v0.1 dan akan dirapikan setelah
+> wireframe disetujui.
 
 ## 1. Ringkasan produk
 
@@ -45,7 +51,8 @@ Publik
 ├── /daftar                Daftar
 ├── /lupa-password
 ├── /privasi               Kebijakan Privasi
-└── /syarat                Syarat Layanan
+├── /syarat                Syarat Layanan
+└── /hapus-akun            Hapus akun tanpa memasang aplikasi
 
 Aplikasi (/app, wajib login)
 ├── Onboarding (sekali, setelah daftar)
@@ -180,10 +187,18 @@ batalkan impor.
 Panduan ekspor: langkah bergambar untuk TikTok Studio, Meta Business Suite,
 dan YouTube Studio.
 
-### 4.7 Pengaturan
+### 4.7 Akun (menu Lainnya)
 
-Profil · Brand & akun sosial · Target · Langganan · Data & privasi
-(unduh semua data, hapus akun dan seluruh datanya).
+- **Profil & keamanan:** nama, email, kata sandi, login Google, perangkat
+  aktif, keluar dari semua perangkat.
+- **Brand:** tambah, ganti, hapus brand.
+- **Langganan:** paket, metode bayar, riwayat tagihan, batalkan.
+- **Privasi & data:** izin analisis AI, izin email promo, unduh semua data,
+  Kebijakan Privasi, kontak soal data, hapus akun.
+- **Bantuan**, **Keluar**.
+
+Syarat lengkapnya (UU PDP, PSE, Google Play, App Store) ada di
+[akun-privasi.md](akun-privasi.md).
 
 ## 5. Alur utama
 

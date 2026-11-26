@@ -146,10 +146,11 @@ sendiri.
 Geser kanan untuk selesai, geser kiri untuk menunda ke besok atau memilih
 tanggal.
 
-**Mode syuting**: layar penuh, layar tetap menyala, daftar shot dengan
-centang besar, teleprompter dari naskah (kecepatan bisa diatur), catatan
-take terbaik, dan tombol "Selesai rekam". Selesai rekam memindahkan konten
-ke tahap Edit.
+Rekam dan edit tetap dilakukan di kamera dan CapCut (yang sudah punya
+teleprompter). Aplikasi ini tidak membuat ulang fitur itu; cukup menyimpan
+checklist, shot list sebagai daftar centang, dan link file hasil editan.
+
+Wireframe semua layar ada di [wireframes/](../wireframes/README.md).
 
 ## 6. Model data tambahan
 
@@ -187,6 +188,5 @@ Konten yang batal dikembalikan ke Bank ide, bukan dihapus.
 1. Menu **Tugas** terpisah dari **Postingan** (usulan di atas), atau tetap
    satu menu "Konten" dengan tab?
 2. Default **mode simpel** untuk pengguna baru: setuju?
-3. Mode syuting dengan teleprompter masuk versi pertama, atau menyusul?
-4. Fase tim (editor/talent dengan akun sendiri): perlu disiapkan sejak awal
+3. Fase tim (editor/talent dengan akun sendiri): perlu disiapkan sejak awal
    di model data? (Usulan: ya, tapi UI-nya menyusul.)

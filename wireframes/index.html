@@ -6,7 +6,7 @@
 <title>Wireframe HP</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=block" rel="stylesheet">
 <style>
-:root{--ink:#2b2b2b;--mute:#8a8a8a;--line:#dcdcdc;--fill:#ececec;--fill2:#f5f5f5;--acc:#1F5F3F;--acc2:#7fa894;--warn:#b54a2c;--board:#eef0ee}
+:root{--ink:#2b2b2b;--mute:#8f8f8f;--line:#dedede;--fill:#ededed;--fill2:#f5f5f5;--acc:#1F5F3F;--acc2:#7fa894;--warn:#b54a2c;--board:#eef0ee}
 *{box-sizing:border-box}
 body{margin:0;background:var(--board);font-family:Inter,system-ui,sans-serif;color:var(--ink)}
 .group{padding:28px 36px 36px}
@@ -15,402 +15,433 @@ body{margin:0;background:var(--board);font-family:Inter,system-ui,sans-serif;col
 .col{width:360px}
 .label{font-weight:700;font-size:15px;margin:0 0 10px}
 .label span{display:inline-block;background:var(--ink);color:#fff;border-radius:6px;padding:1px 7px;margin-right:6px;font-size:12px}
-.phone{width:360px;height:760px;background:#fff;border:2px solid #222;border-radius:34px;overflow:hidden;position:relative;display:flex;flex-direction:column}
+.phone{width:360px;height:740px;background:#fff;border:2px solid #222;border-radius:34px;overflow:hidden;position:relative;display:flex;flex-direction:column}
 .sb{height:28px;display:flex;justify-content:space-between;padding:8px 22px 0;font-size:11px;color:var(--mute);flex:none}
-.scr{flex:1;overflow:hidden;padding:4px 16px 12px;position:relative}
-.fade{position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(#fff0,#fff)}
+.scr{flex:1;overflow:hidden;padding:6px 18px 12px;position:relative}
 .tab{height:64px;border-top:1px solid var(--line);display:flex;justify-content:space-around;align-items:center;font-size:10px;color:var(--mute);flex:none;background:#fff}
 .tab a{display:flex;flex-direction:column;align-items:center;gap:3px;width:56px}
 .tab a i{width:18px;height:18px;border-radius:5px;background:var(--fill);display:block}
 .tab a.on{color:var(--acc);font-weight:700}.tab a.on i{background:var(--acc)}
-.tab .plus{width:48px;height:48px;border-radius:50%;background:var(--acc);color:#fff;font-size:28px;display:flex;align-items:center;justify-content:center;margin-top:-20px;box-shadow:0 2px 0 #0002;flex:none}
-.notes{font-size:12.5px;line-height:1.45;color:#444;margin:12px 0 0;padding-left:18px}
-.notes li{margin-bottom:4px}
-h1{font-size:20px;margin:6px 0 2px;font-weight:800}
-h2{font-size:11px;margin:14px 0 6px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
-.muted{color:var(--mute);font-size:12px}
-.small{font-size:11.5px}
-.card{border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;margin:8px 0;background:#fff}
-.kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.kpi{border:1.5px solid var(--line);border-radius:12px;padding:8px 10px}
-.kpi b{display:block;font-size:18px;font-weight:800}.kpi small{color:var(--mute);font-size:11px}
+.tab .plus{width:48px;height:48px;border-radius:50%;background:var(--acc);color:#fff;font-size:28px;display:flex;align-items:center;justify-content:center;margin-top:-20px;flex:none}
+.notes{font-size:13px;line-height:1.45;color:#555;margin:12px 0 0;padding-left:18px}
+.notes li{margin-bottom:3px}
+h1{font-size:22px;margin:8px 0 6px;font-weight:800}
+h2{font-size:11px;margin:18px 0 6px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.muted{color:var(--mute);font-size:12.5px}
+.card{border:1.5px solid var(--line);border-radius:14px;padding:12px;margin:10px 0;background:#fff}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.kpi{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px}
+.kpi b{display:block;font-size:20px;font-weight:800;margin-top:2px}.kpi small{color:var(--mute);font-size:11.5px}
 .up{color:var(--acc);font-weight:700}
 .dn{color:var(--warn);font-weight:700}
-.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
-.chip{border:1.5px solid var(--line);border-radius:999px;padding:3px 10px;font-size:11.5px;white-space:nowrap}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.chip{border:1.5px solid var(--line);border-radius:999px;padding:4px 11px;font-size:12px;white-space:nowrap}
 .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .ph{background:var(--fill);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:11px}
 .bar{height:8px;border-radius:4px;background:var(--fill);overflow:hidden}.bar>i{display:block;height:100%;background:var(--acc)}
-.task{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:9px 10px;margin:6px 0;background:#fff}
-.cb{width:18px;height:18px;border:2px solid #999;border-radius:50%;flex:none;margin-top:1px}
+.task{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:12px;margin:8px 0;background:#fff}
+.cb{width:20px;height:20px;border:2px solid #999;border-radius:50%;flex:none}
 .cb.sq{border-radius:5px}
 .cb.done{background:var(--acc);border-color:var(--acc)}
-.task .t{font-size:13.5px;font-weight:600}.task .m{font-size:11.5px;color:var(--mute);margin-top:2px}
+.task .t{font-size:14px;font-weight:600}.task .m{font-size:12px;color:var(--mute)}
 .tag{font-size:10px;border-radius:6px;padding:1px 6px;background:var(--fill);margin-left:4px;font-weight:700;color:#555;vertical-align:1px}
 .tag.pro{background:var(--ink);color:#fff}
 .late{border-color:var(--warn)}.late .m{color:var(--warn)}
-.btn{display:block;text-align:center;border-radius:12px;padding:11px;font-weight:700;font-size:13.5px;background:var(--acc);color:#fff;margin-top:10px}
+.btn{display:block;text-align:center;border-radius:12px;padding:13px;font-weight:700;font-size:14px;background:var(--acc);color:#fff;margin-top:12px}
 .btn.ghost{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
-.seg{display:flex;background:var(--fill2);border-radius:10px;padding:3px;margin:8px 0}
-.seg span{flex:1;text-align:center;font-size:12px;padding:6px;border-radius:8px;color:var(--mute)}
+.btn.red{background:var(--warn)}
+.btn.gl{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.seg{display:flex;background:var(--fill2);border-radius:10px;padding:3px;margin:8px 0 12px}
+.seg span{flex:1;text-align:center;font-size:12.5px;padding:7px;border-radius:8px;color:var(--mute)}
 .seg .on{background:#fff;color:var(--ink);font-weight:700;box-shadow:0 1px 2px #0002}
-.li{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--fill)}
+.li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--fill);font-size:14px}
+.li:last-child{border-bottom:0}
+.li .r{margin-left:auto;color:var(--mute);font-size:12.5px}
+.li.danger{color:var(--warn);font-weight:700}
+.ico{width:22px;height:22px;border-radius:7px;background:var(--fill);flex:none}
 .thumb{width:36px;height:36px;border-radius:8px;background:var(--fill);flex:none}
 .flex{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .grow{flex:1;min-width:0}
-.warnbox{border:1.5px dashed var(--warn);border-radius:12px;padding:8px 10px;font-size:12px;color:var(--warn);margin:8px 0}
-.infobox{border:1.5px dashed var(--acc);border-radius:12px;padding:8px 10px;font-size:12px;color:var(--acc);margin:8px 0}
-.top{display:flex;justify-content:space-between;align-items:center;margin:2px 0 4px}
+.top{display:flex;justify-content:space-between;align-items:center;margin:2px 0 4px;font-size:13px}
 .brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px}
-.brand i,.av{width:26px;height:26px;border-radius:50%;background:var(--fill);display:block}
-.icons{display:flex;gap:10px}.icons i{width:20px;height:20px;border-radius:6px;background:var(--fill);display:block}
-.steps{display:flex;gap:4px;margin:8px 0 2px}.steps span{flex:1;height:6px;border-radius:3px;background:var(--fill)}
+.brand i,.av{width:28px;height:28px;border-radius:50%;background:var(--fill);display:block;flex:none}
+.av.big{width:56px;height:56px}
+.ai{background:#eef5f0;border-radius:12px;padding:10px 12px;font-size:13.5px;color:var(--acc);font-weight:600}
+.steps{display:flex;gap:4px;margin:12px 0 4px}.steps span{flex:1;height:6px;border-radius:3px;background:var(--fill)}
 .steps .d{background:var(--acc)}.steps .c{background:var(--acc2)}
-.stepl{display:flex;justify-content:space-between;font-size:10.5px;color:var(--mute)}
+.stepl{display:flex;justify-content:space-between;font-size:11px;color:var(--mute)}
 .kb{display:flex;gap:10px}
-.kcol{min-width:214px;background:var(--fill2);border-radius:12px;padding:8px}
-.kcol h4{margin:2px 2px 6px;font-size:12.5px}
-.kcard{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px;margin-bottom:8px;font-size:12.5px}
-.kcard b{display:block;font-size:13px;margin-bottom:3px}
-.field{border:1.5px solid var(--line);border-radius:10px;padding:9px 10px;font-size:13px;margin:6px 0}
-.field small{display:block;color:var(--mute);font-size:10.5px;margin-bottom:2px}
-.sched .li{padding:6px 0}.sched .d{width:58px;font-size:11.5px;color:var(--mute);flex:none}
-.tbl{width:100%;border-collapse:collapse;font-size:11.5px}
-.tbl th{color:var(--mute);font-weight:600;text-align:right;padding:4px 3px;border-bottom:1px solid var(--line)}
-.tbl td{padding:6px 3px;border-bottom:1px solid var(--fill);text-align:right}
+.kcol{min-width:214px;background:var(--fill2);border-radius:12px;padding:10px}
+.kcol h4{margin:0 2px 8px;font-size:13px}
+.kcard{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px;margin-bottom:8px;font-size:12.5px}
+.kcard b{display:block;font-size:13.5px;margin-bottom:4px}
+.field{border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;margin:8px 0}
+.field small{display:block;color:var(--mute);font-size:11px;margin-bottom:2px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+.tbl th{color:var(--mute);font-weight:600;text-align:right;padding:6px 4px;border-bottom:1px solid var(--line);font-size:11.5px}
+.tbl td{padding:9px 4px;border-bottom:1px solid var(--fill);text-align:right}
 .tbl th:first-child,.tbl td:first-child{text-align:left}
 .chk{border:1.5px solid var(--warn);color:var(--warn);border-radius:6px;padding:0 4px;font-weight:700}
-/* mode syuting */
-.phone.dark{background:#141414;color:#eee;border-color:#000}
-.dark .sb{color:#777}
-.dark .muted{color:#9a9a9a}
-.tp{background:#000;border-radius:14px;padding:14px;font-size:21px;line-height:1.45;font-weight:600;height:250px;overflow:hidden;position:relative;margin:8px 0}
-.tp .past{color:#555}.tp .now{color:#fff;background:#2b4d3c;border-radius:4px}
-.tp:after{content:"";position:absolute;left:0;right:0;bottom:0;height:60px;background:linear-gradient(#0000,#000)}
-.shot{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #2a2a2a;font-size:14px}
-.shot .cb{width:26px;height:26px;border-color:#777}
-.shot .cb.done{background:var(--acc2);border-color:var(--acc2)}
-.dbtn{border-radius:14px;padding:14px;text-align:center;font-weight:800;font-size:14px}
-/* sheet */
 .dim{position:absolute;inset:28px 0 0 0;background:#0007}
-.sheet{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:22px 22px 0 0;padding:10px 16px 18px}
-.grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 10px}
-.opt{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:14px;padding:12px;margin:8px 0}
-.opt i{width:34px;height:34px;border-radius:10px;background:var(--fill);flex:none}
-.opt b{display:block;font-size:14px}.opt span{font-size:11.5px;color:var(--mute)}
-.big{font-size:28px;font-weight:800;margin:2px 0}
+.sheet{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:22px 22px 0 0;padding:10px 18px 22px}
+.grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 12px}
+.big{font-size:30px;font-weight:800;margin:2px 0}
+.tg{width:40px;height:24px;border-radius:12px;background:var(--fill);position:relative;flex:none;margin-left:auto}
+.tg:after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px #0003}
+.tg.on{background:var(--acc)}.tg.on:after{left:19px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13px;margin:10px 0;line-height:1.35}
+.check .cb{margin-top:1px}
+u{text-underline-offset:2px}
+.divider{display:flex;align-items:center;gap:10px;color:var(--mute);font-size:12px;margin:14px 0}
+.divider:before,.divider:after{content:"";flex:1;height:1px;background:var(--line)}
+.warnbox{border:1.5px solid var(--warn);border-radius:12px;padding:12px;font-size:13.5px;margin:10px 0}
+.warnbox b{color:var(--warn)}
+.dot{display:block;margin:6px 0 0 2px;font-size:13.5px}
+.center{text-align:center}
+.okicon{width:64px;height:64px;border-radius:50%;background:#eef5f0;margin:120px auto 16px;display:flex;align-items:center;justify-content:center;color:var(--acc);font-size:30px;font-weight:800}
 </style>
 </head>
 <body>
 
-<!-- ================= KELOMPOK A ================= -->
+<!-- ================= A ================= -->
 <section class="group" id="grup-a">
-<h3>A · Harian: Ringkasan dan Tugas</h3>
+<h3>A · Harian</h3>
 <div class="row">
 
-<!-- 1. Ringkasan -->
 <div class="col">
 <p class="label"><span>1</span>Ringkasan</p>
 <div class="phone">
- <div class="sb"><span>9.41</span><span>▮▮▮ ◔</span></div>
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
  <div class="scr">
-  <div class="top"><div class="brand"><i></i>Yukio Beauty ▾</div><div class="icons"><i></i><i></i></div></div>
-  <h1>Selamat sore, Sarita</h1>
-  <div class="infobox">✦ Views naik 18% dari rata-ratamu, didorong 2 video tutorial. Carousel minggu ini sepi.</div>
-  <div class="chips"><span class="chip">7 hari</span><span class="chip on">30 hari</span><span class="chip">90 hari</span><span class="chip">Semua ▾</span></div>
+  <div class="top"><div class="brand"><i></i>Yukio Beauty ▾</div><i class="av"></i></div>
+  <h1>Halo, Sarita</h1>
+  <div class="ai">✦ Views naik 18%. Video tutorial paling laku.</div>
+  <div class="chips"><span class="chip">7 hari</span><span class="chip on">30 hari</span><span class="chip">90 hari</span></div>
   <div class="kpis">
    <div class="kpi"><small>Views</small><b>64,2 rb</b><small class="up">▲ 18%</small></div>
-   <div class="kpi"><small>Engagement</small><b>4,1%</b><small class="up">▲ 0,6 poin</small></div>
-   <div class="kpi"><small>Followers baru</small><b>+481</b><small class="up">rekor baru</small></div>
-   <div class="kpi"><small>Posting</small><b>3 / 4</b><small>target minggu ini</small></div>
+   <div class="kpi"><small>Engagement</small><b>4,1%</b><small class="up">▲ 0,6</small></div>
+   <div class="kpi"><small>Followers</small><b>+481</b></div>
+   <div class="kpi"><small>Posting</small><b>3 / 4</b></div>
   </div>
-  <div class="card"><div class="flex small"><b>Views per minggu</b><span class="muted">TikTok · IG · YT</span></div><div class="ph" style="height:92px;margin-top:6px">grafik garis</div></div>
-  <div class="card"><div class="flex small"><b>Tugas hari ini (3)</b><span class="up">Lihat semua ›</span></div>
-   <div class="li small"><span class="cb"></span><span class="grow">Rekam · OOTD kampus</span><span class="muted">10.00</span></div>
-   <div class="li small" style="border:0"><span class="cb"></span><span class="grow">Posting · Hair oil part 2</span><span class="muted">19.00</span></div>
-  </div>
-  <div class="card"><b class="small">Top postingan</b>
-   <div class="li small"><i class="thumb"></i><span class="grow">Sunscreen kulit berminyak</span><b>12,4 rb</b></div>
-  </div>
-  <div class="fade"></div>
+  <div class="ph" style="height:150px">grafik views</div>
+  <div class="card flex" style="font-size:14px"><b>3 tugas hari ini</b><span class="up">›</span></div>
  </div>
  <nav class="tab"><a class="on"><i></i>Ringkasan</a><a><i></i>Tugas</a><span class="plus">+</span><a><i></i>Cuan</a><a><i></i>Lainnya</a></nav>
 </div>
-<ul class="notes">
- <li>Satu kalimat AI di atas: kesimpulan, dibandingkan dengan rata-rata akun sendiri.</li>
- <li>Filter periode dan platform berlaku di seluruh aplikasi.</li>
- <li>Kartu "Tugas hari ini" membuka menu Tugas.</li>
- <li>Kalau data lebih dari 7 hari, muncul pengingat impor di atas sapaan.</li>
-</ul>
+<ul class="notes"><li>Satu kesimpulan, empat angka, satu grafik.</li><li>Detail ada di menu masing-masing.</li></ul>
 </div>
 
-<!-- 2. Tugas: Hari ini -->
 <div class="col">
 <p class="label"><span>2</span>Tugas · Hari ini</p>
 <div class="phone">
- <div class="sb"><span>9.41</span><span>▮▮▮ ◔</span></div>
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
  <div class="scr">
-  <div class="top"><h1 style="margin:0">Tugas</h1><div class="icons"><i></i><i></i></div></div>
+  <h1>Tugas</h1>
   <div class="seg"><span class="on">Hari ini</span><span>Papan</span><span>Kalender</span></div>
-  <div class="flex small"><b>Selasa, 26 Nov</b><span class="muted">2 dari 5 selesai</span></div>
-  <div class="bar" style="margin:6px 0 4px"><i style="width:40%"></i></div>
-  <h2>Terlambat (1)</h2>
-  <div class="task late"><span class="cb"></span><div class="grow"><div class="t">Edit · Review sunscreen <span class="tag">Edit</span></div><div class="m">Kemarin · TikTok + Reels · 90 menit</div></div></div>
-  <h2>Hari ini (3)</h2>
-  <div class="task"><span class="cb"></span><div class="grow"><div class="t">Rekam · OOTD kampus <span class="tag">Rekam</span></div><div class="m">10.00 · 60 menit · 7 shot</div></div></div>
-  <div class="task"><span class="cb"></span><div class="grow"><div class="t">Kirim draft ke GlowLab <span class="tag">Endorse</span></div><div class="m">Menunggu approval sejak kemarin</div></div></div>
-  <div class="task"><span class="cb done"></span><div class="grow"><div class="t" style="color:#999;text-decoration:line-through">Naskah · Hair oil part 2</div><div class="m">Selesai 08.20</div></div></div>
+  <div class="flex" style="font-size:13px"><b>2 dari 5 selesai</b></div>
+  <div class="bar" style="margin:8px 0 4px"><i style="width:40%"></i></div>
+  <h2>Terlambat</h2>
+  <div class="task late"><span class="cb"></span><div class="grow"><div class="t">Edit · Sunscreen</div><div class="m">Kemarin</div></div></div>
+  <h2>Hari ini</h2>
+  <div class="task"><span class="cb"></span><div class="grow"><div class="t">Rekam · OOTD kampus</div><div class="m">10.00</div></div></div>
+  <div class="task"><span class="cb"></span><div class="grow"><div class="t">Kirim draft ke GlowLab <span class="tag">Endorse</span></div></div></div>
+  <div class="task"><span class="cb done"></span><div class="grow"><div class="t" style="color:#aaa;text-decoration:line-through">Naskah · Hair oil</div></div></div>
   <h2>Besok (2) ›</h2>
-  <div class="warnbox">Minggu ini 9 tugas, kapasitasmu sekitar 7. <u>Atur ulang</u></div>
-  <p class="muted" style="text-align:center">← geser: tunda · geser: selesai →</p>
-  <div class="fade"></div>
  </div>
  <nav class="tab"><a><i></i>Ringkasan</a><a class="on"><i></i>Tugas</a><span class="plus">+</span><a><i></i>Cuan</a><a><i></i>Lainnya</a></nav>
 </div>
-<ul class="notes">
- <li>Tampilan default saat membuka menu Tugas.</li>
- <li>Urutan tetap: Terlambat → Hari ini → Besok.</li>
- <li>Geser kanan untuk selesai, kiri untuk tunda ke besok atau pilih tanggal.</li>
- <li>Tugas endorse diberi label, dan bisa berstatus Menunggu brand atau produk.</li>
- <li>Peringatan kapasitas muncul kalau jadwal melebihi batas mingguan.</li>
-</ul>
+<ul class="notes"><li>Terlambat → Hari ini → Besok.</li><li>Geser untuk selesai atau tunda.</li></ul>
 </div>
 
-<!-- 3. Tugas: Papan -->
 <div class="col">
 <p class="label"><span>3</span>Tugas · Papan</p>
 <div class="phone">
- <div class="sb"><span>9.41</span><span>▮▮▮ ◔</span></div>
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
  <div class="scr" style="padding-right:0">
-  <div class="top" style="padding-right:16px"><h1 style="margin:0">Tugas</h1><div class="icons"><i></i><i></i></div></div>
-  <div class="seg" style="margin-right:16px"><span>Hari ini</span><span class="on">Papan</span><span>Kalender</span></div>
-  <div class="flex small" style="padding-right:16px;margin-bottom:8px"><span class="muted">Mode simpel · 4 tahap</span><span class="up">Ganti ›</span></div>
+  <h1>Tugas</h1>
+  <div class="seg" style="margin-right:18px"><span>Hari ini</span><span class="on">Papan</span><span>Kalender</span></div>
   <div class="kb">
-   <div class="kcol"><h4>Rencana (4)</h4>
-    <div class="kcard"><b>Hair oil part 3</b><span class="muted">TikTok · terbit Sen 2 Des</span><div class="bar" style="margin-top:6px"><i style="width:30%"></i></div><span class="muted">1/3 checklist</span></div>
-    <div class="kcard"><b>Skincare 5 menit pagi</b><span class="muted">Reels · terbit Rab 4 Des</span><div class="bar" style="margin-top:6px"><i style="width:0"></i></div><span class="muted">0/3</span></div>
-    <div class="kcard"><b>GlowLab serum <span class="tag">Endorse</span></b><span class="muted">TikTok · deadline 2 Des</span><div class="bar" style="margin-top:6px"><i style="width:66%"></i></div><span class="muted">Menunggu approval</span></div>
-    <div class="kcard" style="border-style:dashed;text-align:center;color:#999">+ Konten baru</div>
+   <div class="kcol"><h4>Rencana · 3</h4>
+    <div class="kcard"><b>Hair oil part 3</b><span class="muted">Sen 2 Des</span><div class="bar" style="margin-top:8px"><i style="width:30%"></i></div></div>
+    <div class="kcard"><b>Skincare pagi</b><span class="muted">Rab 4 Des</span><div class="bar" style="margin-top:8px"><i style="width:0"></i></div></div>
+    <div class="kcard"><b>GlowLab serum <span class="tag">Endorse</span></b><span class="muted">2 Des</span><div class="bar" style="margin-top:8px"><i style="width:66%"></i></div></div>
    </div>
-   <div class="kcol"><h4>Rekam (2)</h4>
-    <div class="kcard"><b>OOTD kampus</b><span class="muted">TikTok + Reels · terbit Kam</span><div class="bar" style="margin-top:6px"><i style="width:57%"></i></div><span class="muted">4/7 shot</span></div>
-    <div class="kcard"><b>Review sunscreen</b><span class="muted">…</span></div>
+   <div class="kcol"><h4>Rekam · 2</h4>
+    <div class="kcard"><b>OOTD kampus</b><span class="muted">Kam 28 Nov</span><div class="bar" style="margin-top:8px"><i style="width:57%"></i></div></div>
    </div>
   </div>
-  <div class="fade"></div>
  </div>
  <nav class="tab"><a><i></i>Ringkasan</a><a class="on"><i></i>Tugas</a><span class="plus">+</span><a><i></i>Cuan</a><a><i></i>Lainnya</a></nav>
 </div>
-<ul class="notes">
- <li>Kolom adalah tahap. Mode simpel: Rencana, Rekam, Edit, Terbit. Mode lengkap menampilkan 9 kolom.</li>
- <li>Kartu mewakili satu konten (bukan satu tugas), lengkap dengan progres dan tanggal terbit.</li>
- <li>Di HP digeser ke samping; tahan lalu seret untuk memindahkan tahap.</li>
-</ul>
+<ul class="notes"><li>Satu kartu = satu konten. Seret untuk pindah tahap.</li><li>Kolom: Rencana, Rekam, Edit, Terbit.</li></ul>
 </div>
 
 </div>
 </section>
 
-<!-- ================= KELOMPOK B ================= -->
+<!-- ================= B ================= -->
 <section class="group" id="grup-b">
-<h3>B · Produksi: detail konten, buat dari template, mode syuting</h3>
+<h3>B · Produksi dan input</h3>
 <div class="row">
 
-<!-- 4. Detail konten -->
 <div class="col">
 <p class="label"><span>4</span>Detail konten</p>
 <div class="phone">
- <div class="sb"><span>9.41</span><span>▮▮▮ ◔</span></div>
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
  <div class="scr">
-  <div class="top"><span class="small">‹ Kembali</span><div class="icons"><i></i></div></div>
-  <h1>Review sunscreen kulit berminyak</h1>
-  <div class="chips"><span class="chip">TikTok</span><span class="chip">Reels</span><span class="chip">Jum 29 Nov · 19.00</span></div>
+  <div class="top"><span>‹ Kembali</span><span>⋯</span></div>
+  <h1>Review sunscreen</h1>
+  <div class="muted">TikTok + Reels · Jum 29 Nov, 19.00</div>
   <div class="steps"><span class="d"></span><span class="d"></span><span class="c"></span><span></span></div>
-  <div class="stepl"><span>Rencana ✓</span><span>Rekam ✓</span><span><b style="color:#2b2b2b">Edit</b></span><span>Terbit</span></div>
-  <div class="seg" style="margin-top:12px"><span class="on">Tugas</span><span>Naskah</span><span>Shot</span><span>Info</span></div>
-  <div class="card" style="border-color:#2b2b2b">
-   <div class="flex"><b style="font-size:13.5px">Edit</b><span class="muted">Kam 28 · 90 menit</span></div>
-   <div class="li small"><span class="cb sq done"></span><span class="grow">Pilih take</span></div>
-   <div class="li small"><span class="cb sq done"></span><span class="grow">Potong + subtitle</span></div>
-   <div class="li small"><span class="cb sq"></span><span class="grow">Teks hook di 3 detik pertama</span></div>
-   <div class="li small"><span class="cb sq"></span><span class="grow">Cover / thumbnail</span></div>
-   <div class="li small" style="border:0"><span class="cb sq"></span><span class="grow">QC: audio, typo, musik aman</span></div>
+  <div class="stepl"><span>Rencana</span><span>Rekam</span><span><b style="color:#2b2b2b">Edit</b></span><span>Terbit</span></div>
+  <div class="seg" style="margin-top:16px"><span class="on">Tugas</span><span>Naskah</span><span>Info</span></div>
+  <div class="card">
+   <div class="flex" style="margin-bottom:4px"><b>Edit</b><span class="muted">Kam 28</span></div>
+   <div class="li"><span class="cb sq done"></span>Potong + subtitle</div>
+   <div class="li"><span class="cb sq"></span>Hook 3 detik pertama</div>
+   <div class="li"><span class="cb sq"></span>Cover</div>
   </div>
-  <div class="task"><span class="cb"></span><div class="grow"><div class="t">Posting + pin komentar</div><div class="m">Jum 29 · 19.00 (jam terbaikmu)</div></div></div>
-  <div class="task"><span class="cb"></span><div class="grow"><div class="t">Cek angka 24 jam</div><div class="m">Sab 30</div></div></div>
-  <div class="flex" style="gap:8px"><span class="btn ghost" style="flex:1">▶ Mode syuting</span><span class="btn ghost" style="flex:1">✦ Caption <span class="tag pro">PRO</span></span></div>
-  <div class="fade"></div>
+  <div class="task"><span class="cb"></span><div class="grow"><div class="t">Posting</div><div class="m">Jum 29 · 19.00</div></div></div>
  </div>
  <nav class="tab"><a><i></i>Ringkasan</a><a class="on"><i></i>Tugas</a><span class="plus">+</span><a><i></i>Cuan</a><a><i></i>Lainnya</a></nav>
 </div>
-<ul class="notes">
- <li>Stepper tahap selalu terlihat di atas.</li>
- <li>Tab: Tugas, Naskah (dengan bantuan AI hook), Shot (shot list), Info (tujuan, referensi, link Drive, kerja sama).</li>
- <li>Kalau semua checklist dalam satu tahap selesai, konten pindah ke tahap berikutnya otomatis.</li>
-</ul>
+<ul class="notes"><li>Checklist beres → pindah tahap otomatis.</li><li>Rekam &amp; edit tetap di CapCut; di sini cukup checklist dan link file.</li></ul>
 </div>
 
-<!-- 5. Konten baru dari template -->
 <div class="col">
-<p class="label"><span>5</span>Konten baru dari template</p>
+<p class="label"><span>5</span>Konten baru</p>
 <div class="phone">
- <div class="sb"><span>9.41</span><span>▮▮▮ ◔</span></div>
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
  <div class="scr">
-  <div class="top"><span class="small">✕ Batal</span><b class="small">Konten baru</b><span class="small up">Simpan</span></div>
-  <div class="field"><small>Judul</small>Review sunscreen kulit berminyak</div>
+  <div class="top"><span>✕</span><b>Konten baru</b><span></span></div>
+  <div class="field"><small>Judul</small>Review sunscreen</div>
   <h2>Template</h2>
-  <div class="chips"><span class="chip on">Video pendek</span><span class="chip">Carousel</span><span class="chip">Endorse</span><span class="chip">Live</span><span class="chip">Story</span><span class="chip">+ Milikku</span></div>
+  <div class="chips"><span class="chip on">Video pendek</span><span class="chip">Carousel</span><span class="chip">Endorse</span><span class="chip">Live</span></div>
   <h2>Platform</h2>
-  <div class="chips"><span class="chip on">TikTok ✓</span><span class="chip on">Reels ✓</span><span class="chip">Shorts</span></div>
-  <div class="field"><small>Terbit</small>Jumat, 29 Nov · 19.00 <span class="tag">jam terbaikmu</span></div>
-  <h2>Jadwal otomatis (8 tugas)</h2>
-  <div class="sched">
-   <div class="li small"><span class="d">Sel 25</span><span class="grow">Brief + 3 opsi hook</span><span class="muted">20 m</span></div>
-   <div class="li small"><span class="d">Rab 26</span><span class="grow">Naskah + caption</span><span class="muted">30 m</span></div>
-   <div class="li small"><span class="d">Rab 26</span><span class="grow">Siapkan alat & properti</span><span class="muted">15 m</span></div>
-   <div class="li small"><span class="d" style="color:var(--warn)">Kam 27</span><span class="grow">Rekam</span><span class="muted">60 m</span></div>
-   <div class="li small"><span class="d">Kam 28</span><span class="grow">Edit + cover</span><span class="muted">90 m</span></div>
-   <div class="li small"><span class="d">Jum 29</span><span class="grow">Posting + balas komentar</span><span class="muted">40 m</span></div>
-  </div>
-  <div class="warnbox">Kamis sudah ada 3 tugas (±150 menit). Pindah "Rekam" ke Rabu?  <u>Pindahkan</u></div>
-  <span class="btn">Buat konten + 8 tugas</span>
-  <div class="fade"></div>
+  <div class="chips"><span class="chip on">TikTok</span><span class="chip on">Reels</span><span class="chip">Shorts</span></div>
+  <div class="field"><small>Terbit</small>Jum 29 Nov · 19.00</div>
+  <div class="card flex" style="font-size:14px"><span><b>8 tugas</b> dijadwalkan otomatis</span><span class="up">Lihat ›</span></div>
+  <span class="btn">Buat</span>
  </div>
 </div>
-<ul class="notes">
- <li>Pilih template dan tanggal terbit, lalu semua tugas dibuat mundur dari tanggal itu.</li>
- <li>Jam terbit disarankan dari data performa.</li>
- <li>Bentrok beban kerja dicek sebelum disimpan, beserta saran pindah hari.</li>
- <li>Template endorse menambahkan langkah approval, bukti tayang, dan invoice.</li>
-</ul>
+<ul class="notes"><li>Tugas dibuat mundur dari tanggal terbit.</li><li>Jam terbit disarankan dari data.</li></ul>
 </div>
 
-<!-- 6. Mode syuting -->
 <div class="col">
-<p class="label"><span>6</span>Mode syuting</p>
-<div class="phone dark">
- <div class="sb"><span>9.41</span><span>▮▮▮ ◔</span></div>
- <div class="scr">
-  <div class="top"><span>✕</span><b style="font-size:13px">OOTD kampus · shot 3/7</b><span class="muted">12:04</span></div>
-  <div class="tp"><span class="past">Kalian pernah bingung mau pakai apa ke kampus?</span> <span class="past">Ini tiga outfit yang bisa dipakai seminggu.</span> <span class="now">Yang pertama, kemeja oversize warna krem</span> dipadu celana bahan hitam, simpel tapi rapi. Yang kedua…</div>
-  <div class="flex muted small"><span>Teleprompter <span class="tag pro">PRO</span></span><span>Kecepatan  −  ●●○  +</span></div>
-  <div style="margin-top:6px">
-   <div class="shot"><span class="cb done"></span><span class="grow">A1 · Hook ke kamera</span><span class="muted">take 2 ★</span></div>
-   <div class="shot"><span class="cb done"></span><span class="grow">B1 · Detail sepatu</span></div>
-   <div class="shot"><span class="cb"></span><span class="grow"><b>A2 · Outfit 1, full body</b></span></div>
-   <div class="shot"><span class="cb"></span><span class="grow">B2 · Transisi ganti baju</span></div>
-   <div class="shot" style="border:0"><span class="cb"></span><span class="grow">A3 · Outfit 2</span></div>
-  </div>
-  <div class="flex" style="gap:8px;margin-top:10px">
-   <span class="dbtn grow" style="border:1.5px solid #555">★ Take terbaik</span>
-   <span class="dbtn grow" style="background:#7fa894;color:#0f2a1d">Selesai rekam</span>
-  </div>
+<p class="label"><span>6</span>Tombol (+)</p>
+<div class="phone">
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
+ <div class="scr"><h1 style="color:#bbb">Halo, Sarita</h1></div>
+ <div class="dim"></div>
+ <div class="sheet">
+  <div class="grab"></div>
+  <b style="font-size:17px">Tambah</b>
+  <div class="li" style="margin-top:6px"><i class="ico"></i>Impor screenshot <span class="tag pro">PRO</span></div>
+  <div class="li"><i class="ico"></i>Impor file</div>
+  <div class="li"><i class="ico"></i>Konten baru</div>
+  <div class="li"><i class="ico"></i>Ide baru</div>
+  <div class="li"><i class="ico"></i>Tugas</div>
  </div>
 </div>
-<ul class="notes">
- <li>Layar gelap dan tetap menyala selama mode ini terbuka; tombol besar untuk satu tangan.</li>
- <li>Teleprompter diambil dari tab Naskah, dengan kecepatan yang bisa diatur.</li>
- <li>"Take terbaik" mencatat nomor take untuk editing.</li>
- <li>"Selesai rekam" mencentang tugas Rekam dan memindahkan konten ke tahap Edit.</li>
-</ul>
+<ul class="notes"><li>Semua input cepat dari satu tombol.</li></ul>
 </div>
 
 </div>
 </section>
 
-<!-- ================= KELOMPOK C ================= -->
+<!-- ================= C ================= -->
 <section class="group" id="grup-c">
-<h3>C · Data dan uang: tombol (+), pratinjau impor, Cuan</h3>
+<h3>C · Impor, Cuan, Akun</h3>
 <div class="row">
 
-<!-- 7. Tombol + -->
 <div class="col">
-<p class="label"><span>7</span>Tombol (+)</p>
+<p class="label"><span>7</span>Pratinjau impor</p>
 <div class="phone">
- <div class="sb"><span>9.41</span><span>▮▮▮ ◔</span></div>
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
  <div class="scr">
-  <h1 style="color:#bbb">Selamat sore, Sarita</h1>
-  <div class="kpis" style="opacity:.35"><div class="kpi"><b>64,2 rb</b></div><div class="kpi"><b>4,1%</b></div></div>
- </div>
- <div class="dim"></div>
- <div class="sheet">
-  <div class="grab"></div>
-  <b style="font-size:16px">Tambah</b>
-  <div class="opt"><i></i><div><b>Impor screenshot <span class="tag pro">PRO</span></b><span>Screenshot insight TikTok / IG, angka dibaca otomatis</span></div></div>
-  <div class="opt"><i></i><div><b>Impor file</b><span>CSV / XLSX dari TikTok Studio, Meta Business Suite, YouTube Studio</span></div></div>
-  <div class="opt"><i></i><div><b>Konten baru</b><span>Dari template, tugas dijadwalkan otomatis</span></div></div>
-  <div class="opt"><i></i><div><b>Ide baru</b><span>Teks, link, atau dari tombol Bagikan di TikTok / IG</span></div></div>
-  <div class="opt"><i></i><div><b>Tugas lepas</b><span>Misalnya "Beli lampu ring"</span></div></div>
-  <div class="opt" style="margin-bottom:0"><i></i><div><b>Input manual</b><span>Angka satu postingan</span></div></div>
- </div>
-</div>
-<ul class="notes">
- <li>Satu pintu untuk semua input cepat; selalu ada di tengah bar bawah.</li>
- <li>Impor screenshot paling atas karena kebanyakan kreator hanya pakai HP.</li>
- <li>Ide juga bisa masuk langsung dari tombol Bagikan di TikTok/IG (PWA share target).</li>
-</ul>
-</div>
-
-<!-- 8. Pratinjau impor -->
-<div class="col">
-<p class="label"><span>8</span>Pratinjau impor</p>
-<div class="phone">
- <div class="sb"><span>9.41</span><span>▮▮▮ ◔</span></div>
- <div class="scr">
-  <div class="top"><span class="small">‹ Kembali</span><b class="small">Pratinjau</b><span></span></div>
-  <div class="flex" style="gap:8px;margin:6px 0"><div class="ph" style="height:96px;flex:1">ss 1</div><div class="ph" style="height:96px;flex:1">ss 2</div><div class="ph" style="height:96px;flex:1">ss 3</div></div>
-  <div class="chips"><span class="chip on">TikTok · terdeteksi</span><span class="chip">1–25 Nov</span></div>
-  <div class="infobox">2 postingan baru · 1 diperbarui · 1 angka perlu dicek</div>
+  <div class="top"><span>‹ Kembali</span><b>Pratinjau</b><span></span></div>
+  <div class="flex" style="gap:8px;margin:10px 0"><div class="ph" style="height:100px;flex:1">ss 1</div><div class="ph" style="height:100px;flex:1">ss 2</div><div class="ph" style="height:100px;flex:1">ss 3</div></div>
+  <div class="chips"><span class="chip on">TikTok</span><span class="chip">1–25 Nov</span></div>
   <table class="tbl">
-   <tr><th>Postingan</th><th>Views</th><th>Like</th><th>Kom.</th><th>Save</th></tr>
-   <tr><td>Sunscreen berminyak</td><td>12.400</td><td>1.020</td><td>88</td><td>310</td></tr>
-   <tr><td>Hair oil part 2</td><td><span class="chk">5.6?0</span></td><td>402</td><td>31</td><td>95</td></tr>
-   <tr><td>OOTD kampus</td><td>3.150</td><td>220</td><td>12</td><td>40</td></tr>
+   <tr><th>Postingan</th><th>Views</th><th>Like</th></tr>
+   <tr><td>Sunscreen</td><td>12.400</td><td>1.020</td></tr>
+   <tr><td>Hair oil 2</td><td><span class="chk">5.6?0</span></td><td>402</td></tr>
+   <tr><td>OOTD kampus</td><td>3.150</td><td>220</td></tr>
   </table>
-  <div class="card small" style="margin-top:12px"><b>Cocokkan ke konten</b>
-   <div class="li"><span class="grow">Hair oil part 2</span><span class="up">↔ "Hair oil part 2" ✓</span></div>
-   <div class="li" style="border:0"><span class="grow">OOTD kampus</span><span class="muted">Pilih konten ▾</span></div>
-  </div>
-  <span class="btn">Simpan 3 postingan</span>
-  <p class="muted" style="text-align:center">Setelah disimpan: 1 insight baru di Ringkasan</p>
-  <div class="fade"></div>
+  <p class="muted">1 angka perlu dicek</p>
+  <span class="btn">Simpan</span>
  </div>
 </div>
-<ul class="notes">
- <li>Platform dan periode dikenali otomatis dari isi screenshot atau file.</li>
- <li>Angka yang ragu ditandai "cek" dan bisa langsung diedit.</li>
- <li>Postingan dicocokkan ke konten berstatus Terbit, supaya hasilnya tampil di kartu konten.</li>
- <li>Setiap impor langsung memberi satu insight, supaya terasa ada hasilnya.</li>
-</ul>
+<ul class="notes"><li>Angka yang ragu ditandai dan bisa diedit.</li></ul>
 </div>
 
-<!-- 9. Cuan -->
 <div class="col">
-<p class="label"><span>9</span>Cuan</p>
+<p class="label"><span>8</span>Cuan</p>
 <div class="phone">
- <div class="sb"><span>9.41</span><span>▮▮▮ ◔</span></div>
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
  <div class="scr">
-  <div class="top"><h1 style="margin:0">Cuan</h1><span class="chip">November ▾</span></div>
-  <div class="card"><span class="muted">Pemasukan bulan ini</span><div class="big">Rp4.350.000</div><span class="small up">▲ Rp1,1 jt dari Oktober</span>
-   <div class="chips" style="margin-bottom:0"><span class="chip">Endorse Rp2,5 jt</span><span class="chip">Affiliate Rp1,6 jt</span><span class="chip">Lain Rp250 rb</span></div></div>
-  <div class="kpis"><div class="kpi"><small>Rp per 1.000 views</small><b>Rp68</b></div><div class="kpi"><small>Belum dibayar</small><b class="dn">Rp1 jt</b></div></div>
-  <h2>Kerja sama aktif</h2>
-  <div class="task"><div class="grow"><div class="flex"><span class="t">GlowLab · serum</span><b class="small">Rp1.500.000</b></div><div class="m">Draft video · deadline 2 Des · menunggu approval</div></div></div>
-  <div class="task late"><div class="grow"><div class="flex"><span class="t">Sunny Co · sunscreen</span><b class="small">Rp1.000.000</b></div><div class="m">Invoice jatuh tempo 5 Des · belum dibayar</div></div></div>
-  <h2>Konten paling cuan</h2>
-  <div class="li small"><i class="thumb"></i><span class="grow">Sunscreen berminyak<br><span class="muted">Rp112 / 1.000 views</span></span><b>Rp1,4 jt</b></div>
-  <div class="li small"><i class="thumb"></i><span class="grow">Hair oil part 2<br><span class="muted">Rp45 / 1.000 views</span></span><b>Rp250 rb</b></div>
+  <div class="top"><h1 style="margin:0">Cuan</h1><span class="chip">Nov ▾</span></div>
+  <div class="card"><span class="muted">Bulan ini</span><div class="big">Rp4.350.000</div><span class="up" style="font-size:13px">▲ Rp1,1 jt</span></div>
+  <div class="kpis"><div class="kpi"><small>Per 1.000 views</small><b>Rp68</b></div><div class="kpi"><small>Belum dibayar</small><b class="dn">Rp1 jt</b></div></div>
+  <h2>Kerja sama</h2>
+  <div class="task"><div class="grow"><div class="t">GlowLab</div><div class="m">Draft · 2 Des</div></div><b style="font-size:13px">Rp1,5 jt</b></div>
+  <div class="task late"><div class="grow"><div class="t">Sunny Co</div><div class="m">Invoice telat</div></div><b style="font-size:13px">Rp1 jt</b></div>
   <div class="flex" style="gap:8px"><span class="btn ghost" style="flex:1">Media kit</span><span class="btn ghost" style="flex:1">Rate card</span></div>
-  <div class="fade"></div>
  </div>
  <nav class="tab"><a><i></i>Ringkasan</a><a><i></i>Tugas</a><span class="plus">+</span><a class="on"><i></i>Cuan</a><a><i></i>Lainnya</a></nav>
 </div>
-<ul class="notes">
- <li>Total bulan ini dengan rincian sumber, dibandingkan bulan lalu.</li>
- <li>"Rp per 1.000 views" menunjukkan konten yang benar-benar menghasilkan.</li>
- <li>Kerja sama aktif mengambil status dari alur endorse di Tugas; invoice terlambat ditandai.</li>
- <li>Media kit dan rate card dibuat dari data terbaru dan bisa dibagikan lewat link atau PDF. Seluruh menu ini fitur Pro.</li>
-</ul>
+<ul class="notes"><li>Uang per konten dan per kerja sama.</li></ul>
+</div>
+
+<div class="col">
+<p class="label"><span>9</span>Lainnya · Akun</p>
+<div class="phone">
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
+ <div class="scr">
+  <div class="flex" style="justify-content:flex-start;gap:12px;margin:10px 0 6px"><i class="av big"></i><div><b style="font-size:16px">Sarita</b> <span class="tag pro">PRO</span><div class="muted">sarita@email.com</div></div></div>
+  <h2>Menu</h2>
+  <div class="li"><i class="ico"></i>Ide</div>
+  <div class="li"><i class="ico"></i>Postingan</div>
+  <div class="li"><i class="ico"></i>Laporan</div>
+  <h2>Akun</h2>
+  <div class="li"><i class="ico"></i>Profil &amp; keamanan<span class="r">›</span></div>
+  <div class="li"><i class="ico"></i>Langganan<span class="r">›</span></div>
+  <div class="li"><i class="ico"></i>Privasi &amp; data<span class="r">›</span></div>
+  <div class="li"><i class="ico"></i>Bantuan<span class="r">›</span></div>
+  <div class="li">Keluar</div>
+ </div>
+ <nav class="tab"><a><i></i>Ringkasan</a><a><i></i>Tugas</a><span class="plus">+</span><a><i></i>Cuan</a><a class="on"><i></i>Lainnya</a></nav>
+</div>
+<ul class="notes"><li>Semua urusan akun di satu tempat.</li></ul>
+</div>
+
+</div>
+</section>
+
+<!-- ================= D ================= -->
+<section class="group" id="grup-d">
+<h3>D · Akun</h3>
+<div class="row">
+
+<div class="col">
+<p class="label"><span>10</span>Daftar</p>
+<div class="phone">
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
+ <div class="scr">
+  <div class="ph" style="width:48px;height:48px;border-radius:14px;margin:26px 0 6px">logo</div>
+  <h1>Buat akun</h1>
+  <span class="btn gl">G &nbsp;Lanjut dengan Google</span>
+  <div class="divider">atau</div>
+  <div class="field"><small>Email</small>&nbsp;</div>
+  <div class="field"><small>Kata sandi</small>&nbsp;</div>
+  <div class="check"><span class="cb sq"></span><span>Aku berusia 18+ dan setuju dengan <u>Syarat</u> &amp; <u>Kebijakan Privasi</u></span></div>
+  <div class="check"><span class="cb sq"></span><span>Kirim tips &amp; promo lewat email (opsional)</span></div>
+  <span class="btn">Daftar</span>
+  <p class="muted center">Sudah punya akun? <u>Masuk</u></p>
+ </div>
+</div>
+<ul class="notes"><li>Kotak persetujuan tidak tercentang otomatis.</li><li>Promo terpisah dan opsional.</li></ul>
+</div>
+
+<div class="col">
+<p class="label"><span>11</span>Profil &amp; keamanan</p>
+<div class="phone">
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
+ <div class="scr">
+  <div class="top"><span>‹ Akun</span><span></span></div>
+  <h1>Profil &amp; keamanan</h1>
+  <div class="li">Nama<span class="r">Sarita ›</span></div>
+  <div class="li">Email<span class="r">sarita@… ›</span></div>
+  <div class="li">Kata sandi<span class="r">Ubah ›</span></div>
+  <div class="li">Google<span class="r">Terhubung ›</span></div>
+  <h2>Perangkat aktif</h2>
+  <div class="li">iPhone<span class="r">ini</span></div>
+  <div class="li">Chrome · Mac<span class="r" style="color:var(--warn)">Keluarkan</span></div>
+  <span class="btn ghost">Keluar dari semua perangkat</span>
+ </div>
+</div>
+<ul class="notes"><li>Pengguna bisa memperbaiki datanya sendiri.</li></ul>
+</div>
+
+<div class="col">
+<p class="label"><span>12</span>Langganan</p>
+<div class="phone">
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
+ <div class="scr">
+  <div class="top"><span>‹ Akun</span><span></span></div>
+  <h1>Langganan</h1>
+  <div class="card"><b style="font-size:16px">Pro · bulanan</b><div class="muted" style="margin-top:4px">Rp79.000 · berikutnya 26 Des</div></div>
+  <div class="li">Metode bayar<span class="r">QRIS ›</span></div>
+  <div class="li">Riwayat tagihan<span class="r">›</span></div>
+  <div class="li">Ganti paket<span class="r">›</span></div>
+  <div class="li danger">Batalkan langganan</div>
+  <p class="muted">Pro tetap aktif sampai 26 Des.</p>
+ </div>
+</div>
+<ul class="notes"><li>Batal semudah berlangganan.</li><li>Langganan dari App Store / Play dikelola di sana.</li></ul>
+</div>
+
+</div>
+</section>
+
+<!-- ================= E ================= -->
+<section class="group" id="grup-e">
+<h3>E · Privasi dan hapus akun</h3>
+<div class="row">
+
+<div class="col">
+<p class="label"><span>13</span>Privasi &amp; data</p>
+<div class="phone">
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
+ <div class="scr">
+  <div class="top"><span>‹ Akun</span><span></span></div>
+  <h1>Privasi &amp; data</h1>
+  <h2>Izin</h2>
+  <div class="li"><div>Analisis AI<div class="muted">Screenshot &amp; insight</div></div><span class="tg on"></span></div>
+  <div class="li"><div>Email promo</div><span class="tg"></span></div>
+  <h2>Datamu</h2>
+  <div class="li">Unduh semua data<span class="r">›</span></div>
+  <div class="li">Kebijakan Privasi<span class="r">›</span></div>
+  <div class="li">Hubungi kami soal data<span class="r">›</span></div>
+  <div class="li danger" style="margin-top:12px">Hapus akun<span class="r" style="color:var(--warn)">›</span></div>
+ </div>
+</div>
+<ul class="notes"><li>Izin bisa dicabut kapan saja.</li></ul>
+</div>
+
+<div class="col">
+<p class="label"><span>14</span>Hapus akun</p>
+<div class="phone">
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
+ <div class="scr">
+  <div class="top"><span>‹ Privasi</span><span></span></div>
+  <h1>Hapus akun?</h1>
+  <div class="warnbox"><b>Dihapus permanen:</b>
+   <span class="dot">· Akun &amp; profil</span>
+   <span class="dot">· Brand, konten, tugas</span>
+   <span class="dot">· Data impor &amp; Cuan</span>
+  </div>
+  <div class="li">Unduh datamu dulu<span class="r up">›</span></div>
+  <p class="muted">Langganan Pro ikut berhenti.</p>
+  <div class="field"><small>Ketik HAPUS</small>&nbsp;</div>
+  <span class="btn red">Hapus akun permanen</span>
+ </div>
+</div>
+<ul class="notes"><li>Bisa dari aplikasi dan dari web (/hapus-akun).</li></ul>
+</div>
+
+<div class="col">
+<p class="label"><span>15</span>Akun terhapus</p>
+<div class="phone">
+ <div class="sb"><span>9.41</span><span>▮▮▮</span></div>
+ <div class="scr center">
+  <div class="okicon">✓</div>
+  <h1>Akunmu sudah dihapus</h1>
+  <p class="muted">Sisa data di cadangan hilang dalam 30 hari.<br>Konfirmasi dikirim ke email.</p>
+  <span class="btn ghost" style="margin-top:28px">Ke halaman awal</span>
+ </div>
+</div>
+<ul class="notes"><li>Batas waktu penghapusan disebut jelas.</li></ul>
 </div>
 
 </div>

@@ -22,7 +22,7 @@ markmap:
 
 - Jawab "hari ini aku harus ngapain?"
 - Ide → terbit → evaluasi dalam satu alur
-- Bisa dipakai sambil syuting, satu tangan
+- Cepat dicentang di HP, satu tangan
 - Tidak mulai dari nol: template dan AI
 - Jaga ritme, cegah burnout
 
@@ -39,10 +39,6 @@ markmap:
   - Prioritas, jenis konten
 - Detail konten
   - Semua tugas dan checklist-nya
-- Mode syuting
-  - Shot list layar penuh
-  - Teleprompter
-  - Layar tetap menyala
 - Hari batch
   - Kelompokkan rekaman per lokasi / outfit
 
@@ -196,7 +192,6 @@ markmap:
 - Tombol besar, bisa satu tangan
 - Tetap jalan offline, sinkron nanti
 - Bagikan dari TikTok / IG ke referensi
-- Layar tetap menyala di mode syuting
 
 ## 11. Kondisi khusus
 
@@ -240,6 +235,7 @@ markmap:
 - Ringkasan → tugas hari ini
 - Cuan → endorse, invoice, komisi
 - Laporan → konsistensi dan kecepatan produksi
+- CapCut / kamera: rekam dan edit di sana, di sini cukup checklist dan link file
 
 ## 16. Gratis vs Pro
 
@@ -251,6 +247,5 @@ markmap:
   - AI naskah, hook, shot list
   - Template tanpa batas
   - Jadwal mundur otomatis
-  - Mode syuting + teleprompter
   - Alur endorse lengkap
   - Pengingat Telegram / WhatsApp

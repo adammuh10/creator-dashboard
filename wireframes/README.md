@@ -1,17 +1,26 @@
-# Wireframe HP (v0.1)
+# Wireframe HP (v0.2)
 
-Low-fidelity, 9 layar. Sumber: [index.html](index.html), buka di browser.
+Low-fidelity, 15 layar. Sumber: [index.html](index.html), buka di browser.
 
-Asumsi yang dipakai (belum diputuskan final):
+Prinsip v0.2: satu tujuan per layar, label pendek, detail dipindah ke
+halaman berikutnya.
+
+Keputusan yang dipakai:
 - **Tugas** jadi menu sendiri; bar bawah HP: Ringkasan · Tugas · (+) · Cuan · Lainnya.
 - Pengguna baru memakai **mode simpel** (Rencana → Rekam → Edit → Terbit).
-- **Mode syuting** masuk versi pertama; teleprompter fitur Pro.
+- **Tidak ada mode syuting.** Rekam dan edit tetap di kamera dan CapCut; di
+  sini cukup checklist dan link file.
 
 | Gambar | Layar |
 |---|---|
 | ![A](grup-a.png) | 1 Ringkasan · 2 Tugas, Hari ini · 3 Tugas, Papan |
-| ![B](grup-b.png) | 4 Detail konten · 5 Konten baru dari template · 6 Mode syuting |
-| ![C](grup-c.png) | 7 Tombol (+) · 8 Pratinjau impor · 9 Cuan |
+| ![B](grup-b.png) | 4 Detail konten · 5 Konten baru · 6 Tombol (+) |
+| ![C](grup-c.png) | 7 Pratinjau impor · 8 Cuan · 9 Lainnya / Akun |
+| ![D](grup-d.png) | 10 Daftar · 11 Profil & keamanan · 12 Langganan |
+| ![E](grup-e.png) | 13 Privasi & data · 14 Hapus akun · 15 Akun terhapus |
 
-Belum ada: versi desktop, onboarding, Ide, Postingan, Laporan, Pengaturan,
-dan tampilan kosong (data belum ada).
+Syarat privasi dan toko aplikasi yang dipenuhi tiap layar ada di
+[docs/akun-privasi.md](../docs/akun-privasi.md).
+
+Belum ada: versi desktop, onboarding, Ide, Postingan, Laporan, Masuk /
+lupa kata sandi, notifikasi, dan tampilan kosong.
