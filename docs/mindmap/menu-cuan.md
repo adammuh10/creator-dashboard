@@ -20,23 +20,24 @@ markmap:
 
 ## 1. Kerja sama (brand deals)
 
-- Kolom seperti Notion-mu
+- Kolom yang biasa dipakai creator
   - Brand
   - Status konten
   - Tgl post
   - Status bayar
   - Tgl bayar
   - Fee
-  - Akun (@tipscareer, @tipsngonten)
+  - Akun (bisa lebih dari satu)
   - SOW
-- Rapikan "Platfrom"
+- Pisahkan jadi 3 kolom
   - Platform: IG, TikTok, YouTube
   - Format: Reels, Carousel, Story, Video
   - Add-on: Collab, Mirroring, Owning, Link
-- Lewat perantara
-  - Nama manager / agensi
-  - Komisi %
+- Lewat manager / agensi
+  - Nama perantara
+  - Komisi % atau nominal
   - Fee bersih
+  - Invoice ke brand atau ke agensi
 - Termin
   - DP
   - Pelunasan
@@ -167,6 +168,7 @@ markmap:
 
 ## 7. Pajak
 
+- Default dari 1 pertanyaan awal
 - Pilihan potongan per invoice
   - Tanpa potongan
   - PPh 21 dipotong brand
@@ -180,9 +182,10 @@ markmap:
   - Ditagih = bersih ÷ (1 − tarif − komisi)
   - Dibulatkan ke atas
   - Kamu terima ≥ rate-mu
-- Tampilan invoice
-  - Ringkas: tanpa baris pajak
-  - Rinci: nilai jasa, PPh, ditransfer
+- Tampilan invoice (otomatis)
+  - Ada potongan: rinci
+  - Tanpa potongan: ringkas
+  - Bisa diganti
 - Perkiraan uang bersih per deal
 - Simpan bukti potong
 - Rekap tahunan untuk SPT
@@ -202,9 +205,9 @@ markmap:
 
 ## 9. Impor
 
-- CSV dari Notion
+- CSV dari Notion, Sheets, Excel
 - Cocokkan kolom
-- Rapikan platform / format otomatis
+- Pisahkan platform / format otomatis
 
 ## 10. Template pesan
 
@@ -230,4 +233,4 @@ markmap:
   - Kwitansi, pengingat, link invoice
   - Rate card otomatis
   - Rekap pajak dan ekspor
-  - Impor Notion
+  - Impor CSV

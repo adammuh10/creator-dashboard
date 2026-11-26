@@ -13,24 +13,31 @@ pajak, laporan, impor, template, keamanan, paket). Sumber teks:
 
 ## 1. Kerja sama (brand deals)
 
-Ini pengganti tabel "Brand Deals 2026" di Notion. Kolom yang sudah ada
-dipertahankan, dengan tiga perbaikan yang terlihat dari datamu sekarang.
+Kolomnya mengikuti cara creator biasanya mencatat deal di Notion, Google
+Sheets, atau Excel, ditambah beberapa kolom yang biasanya belum ada.
 
-| Kolom di Notion | Di aplikasi | Catatan |
-|---|---|---|
-| BRAND | Brand | Brand jadi data sendiri (alamat, PIC, email), jadi tidak perlu diketik ulang setiap invoice |
-| Status Konten | Status konten | Nego → Deal → Draft → Revisi → Approved → Posted |
-| Tgl Post | Tanggal posting | Tersambung ke menu Tugas |
-| Status Pay | Status bayar | Belum → Ditagih → DP → Lunas, ditambah Telat (otomatis kalau lewat jatuh tempo) |
-| Tgl Pay | Tanggal dibayar | Diisi saat ditandai Lunas |
-| FEE | Fee | Bruto, sebelum potongan |
-| Platfrom | **Platform + Format + Add-on** | Sekarang isinya campuran (REELS, TIKTOK, MIRRORING, Owning, Carousel). Dipecah supaya bisa dihitung: Platform = IG/TikTok/YouTube, Format = Reels/Carousel/Story/Video, Add-on = Collab/Mirroring/Owning/Link |
-| Akun | Akun | @tipscareer, @tipsngonten, dst. Setiap akun punya rate card sendiri |
-| SOW | SOW | Ditulis sebagai daftar deliverable. Tiap baris otomatis jadi tugas di menu Tugas dan baris di invoice |
-| — | **Lewat (perantara)** | Brand yang ditulis "(Jenni)" dicatat sebagai deal lewat Jenni, beserta komisinya, sehingga fee bersihmu terlihat |
-| — | Termin | DP sekian %, pelunasan setelah posting |
-| — | Bukti tayang | Link postingan + angka dari data impor |
-| — | Brief & kontrak | File atau link |
+| Kolom | Catatan |
+|---|---|
+| Brand | Brand jadi data sendiri (alamat, PIC, email), jadi tidak perlu diketik ulang setiap invoice |
+| Akun | Untuk creator yang punya lebih dari satu akun. Setiap akun punya rate card sendiri |
+| Platform + Format + Add-on | Tiga kolom terpisah. Di tabel manual, ketiganya sering dicampur dalam satu kolom (mis. "Reels, TikTok, mirroring"), jadi tidak bisa dihitung. Platform = IG/TikTok/YouTube, Format = Reels/Carousel/Story/Video, Add-on = Collab/Mirroring/Owning/Link |
+| SOW | Daftar deliverable. Tiap baris otomatis jadi tugas di menu Tugas dan baris di invoice |
+| Status konten | Nego → Deal → Draft → Revisi → Approved → Posted |
+| Tanggal posting | Tersambung ke menu Tugas |
+| Fee | Bruto, sebelum potongan |
+| Status bayar | Belum → Ditagih → DP → Lunas, ditambah Telat (otomatis kalau lewat jatuh tempo) |
+| Tanggal dibayar | Diisi saat ditandai Lunas |
+| **Lewat manager / agensi** | Nama perantara dan komisinya (% atau nominal), sehingga fee bersih terlihat |
+| Termin | DP sekian %, pelunasan setelah posting |
+| Bukti tayang | Link postingan + angka dari data impor |
+| Brief & kontrak | File atau link |
+
+**Deal lewat manager atau agensi.** Ada dua pola, dan creator memilih salah
+satu per deal:
+- **Brand bayar ke kamu, kamu bayar komisi ke manager.** Invoice ke brand.
+  Komisi hanya muncul di hitunganmu, tidak tercetak di invoice.
+- **Brand bayar ke agensi, agensi bayar ke kamu.** Invoice ke agensi
+  (Bill to = agensi), sebesar fee setelah komisi.
 
 ## 2. Profil penagih (diisi sekali, dipakai di semua invoice)
 
@@ -42,7 +49,8 @@ dipertahankan, dengan tiga perbaikan yang terlihat dari datamu sekarang.
   rekening sebagai default.
 - **Tanda tangan:** digambar langsung di layar atau upload PNG transparan.
 - Logo (opsional).
-- Format nomor invoice, misalnya `INV/TC/2026/11/001`.
+- Format nomor invoice, misalnya `INV/2026/11/001`, atau dengan kode akun
+  (`INV/SR/2026/11/001`) untuk creator yang punya beberapa akun.
 
 ## 3. Invoice
 
@@ -63,7 +71,16 @@ dicek.
 
 ### Potongan pajak
 
-Default-nya diatur sekali di pengaturan, dan bisa diganti per invoice.
+**Default untuk pengguna baru.** Saat pertama membuka Cuan, aplikasi
+menanyakan satu hal: *"Biasanya brand memotong pajak dari fee-mu?"*
+
+| Jawaban | Default yang dipasang |
+|---|---|
+| Ya | PPh 21 dipotong brand, 2,5%. Langsung muncul tawaran: "Mau tetap terima rate utuh? Nyalakan harga aman pajak" |
+| Tidak | Tanpa potongan |
+| Belum tahu | Tanpa potongan, plus penjelasan singkat dan perkiraan potongan kalau nanti brand memotong |
+
+Default bisa diubah di pengaturan dan diganti per invoice.
 
 | Pilihan | Dipakai kalau | Hasilnya |
 |---|---|---|
@@ -91,12 +108,15 @@ rate-mu.
 |---|---|---|---|---|---|---|
 | Rp1.000.000 | 2,5% | — | Rp1.026.000 | Rp25.650 | — | Rp1.000.350 |
 | Rp1.000.000 | 3% | — | Rp1.031.000 | Rp30.930 | — | Rp1.000.070 |
-| Rp1.500.000 | 2,5% | 10% (Jenni) | Rp1.715.000 | Rp42.875 | Rp171.500 | Rp1.500.625 |
+| Rp1.500.000 | 2,5% | 10% (manager) | Rp1.715.000 | Rp42.875 | Rp171.500 | Rp1.500.625 |
 
-**Tampilan di invoice** (pilih salah satu):
-- **Ringkas:** hanya harga yang sudah dinaikkan, tanpa baris pajak.
-- **Rinci:** Nilai jasa → PPh 21 dipotong (2,5%) → Jumlah yang ditransfer.
-  Tim finance brand biasanya lebih suka yang ini.
+**Tampilan di invoice** dipilih otomatis, dan bisa diganti:
+- **Rinci** kalau ada potongan pajak: Nilai jasa → PPh 21 dipotong (2,5%) →
+  Jumlah yang ditransfer. Tim finance brand butuh rincian ini untuk membuat
+  bukti potong.
+- **Ringkas** kalau tanpa potongan: hanya total, tanpa baris pajak.
+
+Komisi manager tidak pernah tercetak di invoice ke brand.
 
 Kalau kamu PKP, PPN dihitung dari nilai jasa dan ditambahkan di atasnya;
 PPh dihitung dari nilai jasa sebelum PPN.
@@ -108,7 +128,7 @@ PPh dihitung dari nilai jasa sebelum PPN.
 - Pengingat H-1 dan saat jatuh tempo, plus template pesan follow-up.
 - **Kwitansi otomatis** begitu ditandai Lunas.
 - Setelah terkirim, invoice dikunci. Perubahan dibuat sebagai revisi
-  (`INV/TC/2026/11/001-R1`), supaya arsipnya rapi.
+  (`INV/2026/11/001-R1`), supaya arsipnya rapi.
 
 ### Arsip
 
@@ -138,7 +158,7 @@ rate = median views ÷ 1.000 × tarif per 1.000 views
 
 Hasilnya dua angka: **harga buka** (untuk nego) dan **harga minimum** (batas
 bawah). Di sebelahnya ada **fee rata-rata asli** dari deal-deal sebelumnya,
-misalnya "Reels @tipscareer: rata-rata Rp1.150.000 dari 6 deal", supaya
+misalnya "Reels: rata-rata Rp1.150.000 dari 6 deal", supaya
 kelihatan kalau rate card terlalu tinggi atau terlalu rendah.
 
 ### Harga custom dan paket
@@ -176,8 +196,8 @@ Bisa dibagikan sebagai PDF atau link, dan nyambung ke media kit.
 
 | Ide | Kenapa penting |
 |---|---|
-| **Impor dari Notion** (CSV) | Data "Brand Deals 2026" langsung pindah, tanpa ketik ulang. Kolom Platfrom otomatis dipecah jadi platform, format, dan add-on |
-| **Perantara + komisi** | Fee bruto vs yang benar-benar kamu terima kelihatan jelas |
+| **Impor dari Notion, Sheets, Excel** (CSV) | Catatan deal yang sudah ada langsung pindah, tanpa ketik ulang. Kolom dicocokkan otomatis; kolom campuran platform/format dipecah jadi tiga |
+| **Manager / agensi + komisi** | Fee bruto vs yang benar-benar kamu terima kelihatan jelas |
 | **Termin / DP** | Banyak brand bayar DP dulu; sisa tagihan dihitung otomatis |
 | **Lama dibayar per brand** | Kelihatan brand yang selalu telat bayar, berguna untuk menentukan syarat DP berikutnya |
 | **Brand langganan** | Brand yang deal lebih dari sekali bisa ditawari paket bulanan |
@@ -207,11 +227,15 @@ Detail syarat ada di [akun-privasi.md](akun-privasi.md).
 | Invoice | 3 per bulan | Tanpa batas, plus kwitansi, link, pengingat |
 | Rate card otomatis | — | Ya |
 | Rekap pajak & ekspor | — | Ya |
-| Impor Notion | Ya (sekali, supaya mudah pindah) | Ya |
+| Impor CSV (Notion, Sheets, Excel) | Ya (sekali, supaya mudah pindah) | Ya |
 
 ## 8. Keputusan terbuka
 
-1. Default potongan pajak untuk akunmu: PPh 21 biasa atau harga aman pajak? Tampilan invoice default: ringkas atau rinci?
-2. Default jatuh tempo: NET 7 atau NET 14?
-3. Nilai awal add-on dan faktor format: pakai angka di atas, atau kamu punya patokan sendiri?
-4. Perlu contoh file ekspor CSV dari Notion "Brand Deals 2026" supaya impornya pas.
+Sudah diputuskan: default pajak lewat satu pertanyaan awal, dan tampilan
+invoice otomatis (rinci kalau ada potongan). Lihat bagian 3.
+
+1. Default jatuh tempo: NET 7 atau NET 14?
+2. Nilai awal add-on dan faktor format: cek ke 10-20 creator lewat survei
+   validasi (lihat [ux-research.md](ux-research.md)) sebelum dipakai.
+3. Kumpulkan 5-10 contoh tabel brand deals dari creator lain (Notion,
+   Sheets, Excel) untuk menguji pencocokan kolom saat impor.
