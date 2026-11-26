@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-mode=dark], [data-mode=dark] *));
+
+@theme inline {
+  --color-page: var(--page);
+  --color-side: var(--side);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-hl: var(--hl);
+  --color-hl-soft: var(--hl-soft);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ---------- Tema terang (default: Krem) ---------- */
+:root {
+  color-scheme: light;
+  --card: #ffffff;
+  --ink: #1c211e;
+  --ink-2: #616864;
+  --line: #e8e2d8;
+  --grid: #e7e7e7;
+  --axis: #c2c2c2;
+  --good: #006c10;
+  --bad: #c42f30;
+  /* warna data tetap (divalidasi CVD), tidak ikut tema */
+  --s-tiktok: #257de0;
+  --s-instagram: #f47230;
+  --s-youtube: #00b894;
+
+  --page: #f5efe6;
+  --side: #efe6d8;
+  --accent: #1f5f3f;
+  --accent-soft: #e1ede5;
+  --on-accent: #ffffff;
+  --hl: #c9557c;
+  --hl-soft: #fbe5ec;
+}
+[data-theme="lavender"] { --page: #f3f1fa; --side: #e9e5f6; --accent: #5a45c0; --accent-soft: #e8e4fa; --hl: #b8651f; --hl-soft: #fcecdc; }
+[data-theme="laut"] { --page: #eef4f7; --side: #e0ebf1; --accent: #17608f; --accent-soft: #dcebf5; --hl: #b8651f; --hl-soft: #fcecdc; }
+[data-theme="mawar"] { --page: #faf0ef; --side: #f3e1df; --accent: #9b3553; --accent-soft: #f6e0e6; --hl: #8a6a12; --hl-soft: #f6eccf; }
+[data-theme="mono"] { --page: #f3f3f2; --side: #e8e8e6; --accent: #222222; --accent-soft: #e6e6e4; --hl: #555555; --hl-soft: #ececea; }
+
+/* ---------- Mode gelap ---------- */
+:root[data-mode="dark"] {
+  color-scheme: dark;
+  --card: #191919;
+  --ink: #efefef;
+  --ink-2: #9c9c9c;
+  --line: #2c2c2c;
+  --grid: #303030;
+  --axis: #474747;
+  --good: #53c556;
+  --bad: #eb6263;
+  --s-tiktok: #338ced;
+  --s-instagram: #e76624;
+  --s-youtube: #00a888;
+  --page: #0f0f0f;
+  --side: #141414;
+  --on-accent: #0f0f0f;
+  --accent: #6fbf8f;
+  --accent-soft: #1c2a22;
+  --hl: #e88aa8;
+  --hl-soft: #3a2029;
+}
+:root[data-mode="dark"][data-theme="lavender"] { --accent: #a896f2; --accent-soft: #24203a; --hl: #f0a868; --hl-soft: #3a2a1c; }
+:root[data-mode="dark"][data-theme="laut"] { --accent: #5aaee0; --accent-soft: #15283a; --hl: #f0a868; --hl-soft: #3a2a1c; }
+:root[data-mode="dark"][data-theme="mawar"] { --accent: #e58aa4; --accent-soft: #391e27; --hl: #e3c26a; --hl-soft: #3a3018; }
+:root[data-mode="dark"][data-theme="mono"] { --accent: #e6e6e6; --accent-soft: #2a2a2a; --hl: #b5b5b5; --hl-soft: #2a2a2a; }
+
+html, body { background: var(--page); color: var(--ink); }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+.tnum { font-variant-numeric: tabular-nums; }
+* { -webkit-tap-highlight-color: transparent; }
+::selection { background: var(--accent-soft); }
+.scroll-x { overflow-x: auto; scrollbar-width: thin; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

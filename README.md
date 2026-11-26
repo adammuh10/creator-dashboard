@@ -10,3 +10,9 @@ insight AI.
 - [Wireframe alur (website)](wireframes/README.md)
 - [Akun & privasi: daftar syarat](docs/akun-privasi.md)
 - [Menu Cuan: kerja sama, invoice, rate card](docs/cuan.md)
+
+## Aplikasi
+
+Kode website ada di [web/](web/README.md). Tahap 1: Ringkasan, Saran AI,
+Postingan, Audiens, tampilan HP, dan ganti tema. Daftar metrik:
+[docs/metrik-insight.md](docs/metrik-insight.md).
